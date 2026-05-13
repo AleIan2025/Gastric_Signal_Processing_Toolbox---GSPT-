@@ -9,6 +9,6 @@ authors:
     given-names: "Salvatore Maria"
  - family-names: "Della Penna"
     given-names: "Stefania"
-title: "Gastric Signal Processing Toolbox (GSPT)"
+title: "GSPT: a full automated pipeline for channel-wise multi-electrod electrogastrography data analysis"
 version: 1.0.0
 date-released: 2026-05-12
