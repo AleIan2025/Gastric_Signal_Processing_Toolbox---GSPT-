@@ -82,38 +82,9 @@ addpath("C:\Users\aless\Documents\fieldtrip-20251023\fieldtrip-20251023")
 ft_defaults;
 % ⚠️ Update the path below to match your local data path
 cfg = [];
-%cfg.dataset='C:\Users\aless\Documents\MATLAB\taVNS\Sub_07\V2\Sub_07_baseline_Pre_V2.eeg';
-%cfg.dataset='C:\Users\aless\Documents\MATLAB\taVNS\Sub_40\V1\Sub_40_carte_1_Act_V1.eeg';
-%cfg.dataset='C:\Users\aless\Documents\noise_EGG_prove\Chiara_clean_1.eeg';
-%clean
-%cfg.dataset='C:\Users\aless\Documents\noise_EGG_prove\Chiara_Mov_2.eeg';
-% super clean
-%cfg.dataset='C:\Users\aless\Documents\noise_EGG_prove\Chiara_Mov_3.eeg';
+
 cfg.dataset='C:\Users\aless\Downloads\Clean_example.eeg';
-%cfg.dataset='C:\Users\aless\Documents\noise_EGG_prove\Chiara_Mov_4.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\MATLAB\dati_chiara_andrea\p08_Raw Data.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\Example_Bad_Quality.eeg';
-%cfg.dataset = 'C:\Users\aless\Downloads\'
-%cfg.dataset = 'C:\Users\aless\Documents\file_email_ingegneri\Maria_clean_2.eeg';
-%cfg.dataset='C:\Users\aless\Documents\file_email_ingegneri\Sub_07\V2\Sub_07_baseline_Pre_V2.eeg';
-%cfg.dataset='C:\Users\aless\Documents\MATLAB\Sub_08_baseline_Pre_V1.eeg';
-%cfg.dataset='C:\Users\aless\Documents\MATLAB\Sub_17_baseline_Sha_V1.eeg';
-%cfg.dataset='C:\Users\aless\Documents\MATLAB\chiara_baseline_02_05_24.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\noise_EGG_prove\Gabo_Mov_2.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\noise_EGG_prove\Maria_Mov_3.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\noise_EGG_prove\Chiara_Mov_5.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\noise_EGG_prove\Gianluca_prove_rumore.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\noise_EGG_prove\P_04_rumore_01.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\noise_EGG_prove\P_04_rumore_2.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\noise_EGG_prove\P_05_prove_rumore.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\noise_EGG_prove\P_04_rumore_3.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\noise_EGG_prove\P_06_prove_rumore.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\MATLAB\prova_rita_1_10min.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\MATLAB\prova_franz_1_baseline.eeg';
-%cfg.dataset='C:\Users\aless\Downloads\Example_Clean.eeg';
-%cfg.dataset ='C:\Users\aless\Documents\MATLAB\noise_EGG_prove\Chiara_Mov_1.eeg';
-%cfg.dataset ='C:\Users\aless\Documents\noise_EGG_prove\Gabo_Mov_3.eeg';
-%cfg.dataset = 'C:\Users\aless\Documents\MATLAB\noise_EGG_prove\P_06_prove_rumore.eeg';
+
 % ⚠️ Channel selection can be done in several ways.
 % By default, all available channels are selected.
 % Choose the option that best suits your data.
@@ -139,13 +110,6 @@ dataset_name = cfg.dataset;
 % Numero di canali
 %fprintf('%d EGG channels loaded: %s\n', nCh, strjoin(cfg.channel, ', '));
 
-
-script_p = 'C:\Users\aless\Downloads';
-file_name   = 'EGG_raw_example2_reb.mat';
-load(strcat([script_p filesep file_name]));
-nCh=numel(EGG_raw.label);
-%cfg.channel = {'EGG1', 'EGG2', 'EGG3', 'EGG4'}; 
-channel_names=EGG_raw.label;
 %% 2. REMOVE HIGH-FREQUENCY SPIKES
 disp('Removing high-frequency spikes...')
 for ch = 1:nCh
