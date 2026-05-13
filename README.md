@@ -9,3 +9,7 @@ To run this toolbox, you need:
     * Signal Processing Toolbox
     * Optimization Toolbox
     * Statistics and Machine Learning Toolbox
+    * Econometrics Toolbox
+    * Predictive Maintenance Toolbox
+    * Wavelet Toolbox
+    * Fieldtrip 
