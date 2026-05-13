@@ -106,7 +106,7 @@ channel_names = cfg.channel;
 % load the datas
 EGG_raw = ft_preprocessing(cfg);
 nCh = numel(cfg.channel); % number of channels
-dataset_name = cfg.dataset;
+
 
 
 %% 2. REMOVE HIGH-FREQUENCY SPIKES
