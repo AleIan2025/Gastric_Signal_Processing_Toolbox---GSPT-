@@ -47,6 +47,7 @@ If the Forced option is selected, the artifact localization and removal will be 
 the former is more aggressive leading to a greater number of true positive at the expense of having more false positive. The choice between the two is left to the needs of the user.
 
 <img width="415" height="371" alt="MC_test_spike_anomalies_found" src="https://github.com/user-attachments/assets/9397b1a7-fca8-4a0d-8be8-ba60fb175e5e" /> <img width="415" height="371" alt="MC_spike_test" src="https://github.com/user-attachments/assets/13416fee-0a26-4fef-a86e-618dae117dff" />
+
 Monte Carlo RP control possible outcomes. Following the results of the figure on the left, the artifact removal algorithm will be run on that specific channel. The opposite is true for the image on the right.
 
 
