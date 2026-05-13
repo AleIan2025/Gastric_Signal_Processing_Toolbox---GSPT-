@@ -17,6 +17,12 @@ In addition to these quantities, **GSPT** computes the **instantaneous phase, am
 
 By being completely automated and data-driven, **GSPT** aims to be a cornerstone for a **standardized**, **user-friendly**, and **reproducible** EGG processing pipeline.
 
+
+## GSPT flowchart
+
+<img width="8113" height="8741" alt="Pipeline_flowchart_last" src="https://github.com/user-attachments/assets/55bd8bad-5791-40b0-824f-31409366d81d" />
+
+
 ## Prerequisites
 
 To run this toolbox, you need:
@@ -29,10 +35,6 @@ To run this toolbox, you need:
     * Predictive Maintenance Toolbox
     * Wavelet Toolbox
     * Fieldtrip 
-
-## GSPT flowchart
-
-<img width="8113" height="8741" alt="Pipeline_flowchart_last" src="https://github.com/user-attachments/assets/55bd8bad-5791-40b0-824f-31409366d81d" />
 
 
 ## How to Run
