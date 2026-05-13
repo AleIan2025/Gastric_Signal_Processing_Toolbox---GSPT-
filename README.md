@@ -50,25 +50,25 @@ If the **Forced** option is selected, artifact localization and removal are perf
 
 ## Output files
 
-Once GSPT has finished, it will save three different files in your slected Output folder:
-* **Single_channel_parameters**: a combination of many features describing each single channel separately. You will find classical metrics like the dominant frequency and others like TFR Renyi Entropy or the Lyapunov exponent
-* **Total_correlation_and_multivariate_entropies**: metrics describing the overall correlation and complexity of all the channels in the recording
-* **Instantaneous_curves**: the intantaneous Phase, Frequency and Amplitude of the fundamental gastric normogastric components
+Once GSPT has finished, it will save three different files in your selected Output folder:
 
-Together with gastric features there are also other importat colums in the **Single_channel_parameters** file:
+* **Single_channel_parameters**: A collection of features describing each channel individually. This includes classical metrics, such as the dominant frequency, as well as more advanced measures like TFR Renyi Entropy and the Lyapunov exponent.
+* **Total_correlation_and_multivariate_entropies**: Metrics describing the overall correlation and complexity across all recorded channels.
+* **Instantaneous_curves**: The instantaneous Phase, Frequency, and Amplitude of the fundamental normogastric components.
+
+In addition to the gastric features, the **Single_channel_parameters** file also contains several other important columns:
 
 
 <img width="601" height="76" alt="nuovo_single_channel_excel" src="https://github.com/user-attachments/assets/6d94164a-1274-48b9-bbcc-7f72193a0ba9" />
 
-* **Fraction_of_contaminated_signal**: the ratio between the duration of time intervals labeled as anomalies (and therefore removed) and the total length of that specific signal
-* **is_noise**: the results of a quality check via Monte Carlo surrogates (IAAFWT surrogates) if is_noise is yes, the EGG features for that channel are not distinguisheable from IAAFWT noise according to the test
-* **CV_selection_low_0.5CPM**: a recording selection based on dominant frequency (DF) coherence between different EGG channels. Tha maximum DF difference between the channel for this threhsold is set to 0.5 cmp or 0.0083 Hz
-* **CV_selection_low_1CPM**: a recording selection based on dominant frequency (DF) coherence between different EGG channels. The maximum DF difference between the channel for this threhsold is set to 1 cmp or 0.016 Hz
-* **CV_selection_low_2CPM**: a recording selection based on dominant frequency (DF) coherence between different EGG channels. The maximum DF difference between the channel for this threhsold is set to 2 cmp or 0.033 Hz
+* **Fraction_of_contaminated_signal**: the ratio between the duration of time intervals labeled as anomalies (and subsequently removed) and the total length of the signal.
+* **is_noise**: the result of a quality check via Monte Carlo surrogates (IAAFWT). If is_noise is "yes," the EGG features for that channel are not statistically distinguishable from IAAFWT noise.
+* **CV_selection_low_0.5CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 0.5 cpm (0.0083 Hz).
+* **CV_selection_low_1CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 1 cmp or 0.016 Hz
+* **CV_selection_low_2CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 2 cmp or 0.033 Hz
 
-All these columns can serve as data selection tools. For example, if a channel has a **Fraction_of_contaminated_signal** of 0.9, it means that only 10% of the signal is free from anomalies and you may want to discard the data from this channel.
-The selection based on CV is proposed with three different thresholds, the choise to be more or less selective is left to the user.
-
+All these columns serve as data selection tools. For example, if a channel has a *Fraction_of_contaminated_signal* of 0.9, it means that only 10% of the signal is free from anomalies, suggesting the data from this channel should likely be discarded.
+The CV-based selection is provided with three different thresholds; the choice of being more or less conservative is left to the user's discretion.
 
 
 
