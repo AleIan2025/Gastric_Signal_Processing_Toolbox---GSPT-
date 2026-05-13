@@ -3,12 +3,12 @@ message: "If you use this software, please cite it as below."
 authors:
   - family-names: "Iannone"
     given-names: "Alessandro"
- - family-names: "Panasiti"
+  - family-names: "Panasiti"
     given-names: "Maria Serena"
- - family-names: "Aglioti"
+  - family-names: "Aglioti"
     given-names: "Salvatore Maria"
- - family-names: "Della Penna"
+  - family-names: "Della Penna"
     given-names: "Stefania"
-title: "GSPT: a full automated pipeline for channel-wise multi-electrod electrogastrography data analysis"
+title: "GSPT: A fully automated pipeline for channel-wise multi-electrode electrogastrography data analysis"
 version: 1.0.0
 date-released: 2026-05-12
