@@ -16,6 +16,20 @@ To run this toolbox, you need:
 
 ## How to Run
 
+GSPT can be run simply by the file EGG_main_multichannel_v4_with_choice by modifiyng according to you needs the lines of code inside the red boxed in the following figure:
+
+<img width="548" height="467" alt="initial_lines" src="https://github.com/user-attachments/assets/eee25152-aa43-460e-8cc2-e543fc0c6c68" />
+
+These are respectively:
+
+* An Output folder where gastric features will be saved in three different excel files. You can choose any path on you PC
+* The path where filedtrip is located on your PC
+* The path to the dataset you want to analysze
+
+Eventually, you will also need to run the command addpat("YOUR\PATH") in the command line specifing the folder where all the GSPT are on your PC.
+
+
+
 <img width="445" height="258" alt="initial_choice_pipeline" src="https://github.com/user-attachments/assets/3db85188-d672-4dc7-9119-3838ca3668e2" />
 
 
