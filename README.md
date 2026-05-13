@@ -31,10 +31,15 @@ These are respectively:
 Eventually, you will also need to change the cfg.channel structure to adapt it to the names of the channels of your recording. 
 You can also select channels in different ways, like selecting them all or select them characterized by a common identifier.
 
-Once you correctly modify these lines, a
+Once you correctly modify these lines, a window will appear as you can see in the figure below:
 
 
 <img width="445" height="258" alt="initial_choice_pipeline" src="https://github.com/user-attachments/assets/3db85188-d672-4dc7-9119-3838ca3668e2" />
+
+
+You can now choose to run GSPT with a 
+* preliminary check on the existence of movent or spike-like artifacts in the given channel based on Monte Carlo Randopm Shuffling surrogate testing (RP)
+* no preliminary check ()
 
 
 When control is on there will be an image generated:
