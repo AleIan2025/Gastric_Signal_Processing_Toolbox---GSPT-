@@ -646,6 +646,8 @@ summary_block{1,1} = 'Channel Reliability Summary';
 summary_block{2,1} = 'Channel';
 summary_block{2,2} = 'Status';
 for ch = 1:nCh
+     % Assign the channel identifier to the first column
+     summary_block{2+ch, 1} = sprintf('Channel %d', ch);
      [is_globally_significant, p_simes] = calculate_simes_test([parameters_results{ch}.spec_skewness.p_value_right, ...
         parameters_results{ch}.spec_sparsity.p_value_right], 0.05);
      if is_globally_significant
