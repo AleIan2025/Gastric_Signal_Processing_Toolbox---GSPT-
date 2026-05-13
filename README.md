@@ -36,18 +36,16 @@ Once these lines have been correctly modified, a window will appear as shown in 
 <img width="445" height="258" alt="initial_choice_pipeline" src="https://github.com/user-attachments/assets/3db85188-d672-4dc7-9119-3838ca3668e2" />
 
 
-You can now choose to run GSPT with a 
-* preliminary check on the existence of movent or spike-like artifacts in the given channel based on Monte Carlo Randopm Shuffling surrogate testing: **Conditional (RP control)** (see figure below)
+You can now choose to run GSPT in two different modes:
 
-* no preliminary check: **Forced (always localize)**
+* **Conditional (RP control)**: Performs a preliminary check for movement or spike-like artifacts in the selected channel using Monte Carlo Random Shuffling surrogate testing.
+* **Forced (always localize)**: No preliminary check is performed; the algorithm proceeds directly to localization.
 
-If the Conditional option is selected, GSPT will run the artifact localization and removal algorithm only if the MC test finds that the signal is affected by movement or spike-like artifacts.
-If the Forced option is selected, the artifact localization and removal will be run by default. The latter protect from an exessive number of false positive at the expense of loosing some true positive;
-the former is more aggressive leading to a greater number of true positive at the expense of having more false positive. The choice between the two is left to the needs of the user.
+If the **Conditional** option is selected, GSPT will run the artifact localization and removal algorithm only if the Monte Carlo (MC) test detects that the signal is affected by movement or spike-like artifacts. An example of the two possible outcomes can be seen in the figures below
 
 <img width="415" height="371" alt="MC_test_spike_anomalies_found" src="https://github.com/user-attachments/assets/9397b1a7-fca8-4a0d-8be8-ba60fb175e5e" /> <img width="415" height="371" alt="MC_spike_test" src="https://github.com/user-attachments/assets/13416fee-0a26-4fef-a86e-618dae117dff" />
 
-Monte Carlo RP control possible outcomes. Following the results of the figure on the left, the artifact removal algorithm will be run on that specific channel. The opposite is true for the image on the right.
+If the **Forced** option is selected, artifact localization and removal are performed by default. This latter mode protects against an excessive number of false positives at the expense of losing some true positives. Conversely, the Conditional option is more aggressive, leading to a higher number of true positives at the cost of more false positives. The choice between the two is left to the user's specific needs.
 
 
 ## Output files
