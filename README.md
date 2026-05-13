@@ -38,9 +38,9 @@ Once you correctly modify these lines, a window will appear as you can see in th
 
 
 You can now choose to run GSPT with a 
-* preliminary check on the existence of movent or spike-like artifacts in the given channel based on Monte Carlo Randopm Shuffling surrogate testing: Conditional (RP control) (see figure below)
+* preliminary check on the existence of movent or spike-like artifacts in the given channel based on Monte Carlo Randopm Shuffling surrogate testing: **Conditional (RP control)** (see figure below)
 
-* no preliminary check: Forced (always localize)
+* no preliminary check: **Forced (always localize)**
 
 If the Conditional option is selected, GSPT will run the artifact localization and removal algorithm only if the MC test finds that the signal is affected by movement or spike-like artifacts.
 If the Forced option is selected, the artifact localization and removal will be run by default. The latter protect from an exessive number of false positive at the expense of loosing some true positive;
@@ -54,22 +54,22 @@ Monte Carlo RP control possible outcomes. Following the results of the figure on
 ## Output files
 
 Once GSPT has finished, it will save three different files in your slected Output folder:
-* Single_channel_parameters: a combination of many features describing each single channel separately. You will find classical metrics like the dominant frequency and others like TFR Renyi Entropy or the Lyapunov exponent
-* Total_correlation_and_multivariate_entropies: metrics describing the overall correlation and complexity of all the channels in the recording
-* Instantaneous_curves: the intantaneous Phase, Frequency and Amplitude of the fundamental gastric normogastric components
+* **Single_channel_parameters**: a combination of many features describing each single channel separately. You will find classical metrics like the dominant frequency and others like TFR Renyi Entropy or the Lyapunov exponent
+* **Total_correlation_and_multivariate_entropies**: metrics describing the overall correlation and complexity of all the channels in the recording
+* **Instantaneous_curves**: the intantaneous Phase, Frequency and Amplitude of the fundamental gastric normogastric components
 
-Together with gastric features there are also other importat colums in the Single_channel_parameters file:
+Together with gastric features there are also other importat colums in the **Single_channel_parameters** file:
 
 
 <img width="601" height="76" alt="nuovo_single_channel_excel" src="https://github.com/user-attachments/assets/6d94164a-1274-48b9-bbcc-7f72193a0ba9" />
 
-* Fraction_of_contaminated_signal: the ratio between the duration of time intervals labeled as anomalies (and therefore removed) and the total length of that specific signal
-* is_noise: the results of a quality check via Monte Carlo surrogates (IAAFWT surrogates) if is_noise is yes, the EGG features for that channel are not distinguisheable from IAAFWT noise according to the test
-* CV_selection_low_0.5CPM: a recording selection based on dominant frequency (DF) coherence between different EGG channels. Tha maximum DF difference between the channel for this threhsold is set to 0.5 cmp or 0.0083 Hz
-* CV_selection_low_1CPM: a recording selection based on dominant frequency (DF) coherence between different EGG channels. The maximum DF difference between the channel for this threhsold is set to 1 cmp or 0.016 Hz
-* CV_selection_low_2CPM: a recording selection based on dominant frequency (DF) coherence between different EGG channels. The maximum DF difference between the channel for this threhsold is set to 2 cmp or 0.033 Hz
+* **Fraction_of_contaminated_signal**: the ratio between the duration of time intervals labeled as anomalies (and therefore removed) and the total length of that specific signal
+* **is_noise**: the results of a quality check via Monte Carlo surrogates (IAAFWT surrogates) if is_noise is yes, the EGG features for that channel are not distinguisheable from IAAFWT noise according to the test
+* **CV_selection_low_0.5CPM**: a recording selection based on dominant frequency (DF) coherence between different EGG channels. Tha maximum DF difference between the channel for this threhsold is set to 0.5 cmp or 0.0083 Hz
+* **CV_selection_low_1CPM**: a recording selection based on dominant frequency (DF) coherence between different EGG channels. The maximum DF difference between the channel for this threhsold is set to 1 cmp or 0.016 Hz
+* **CV_selection_low_2CPM**: a recording selection based on dominant frequency (DF) coherence between different EGG channels. The maximum DF difference between the channel for this threhsold is set to 2 cmp or 0.033 Hz
 
-All these columns can serve as data selection tools. For example, if a channel has a Fraction_of_contaminated_signal of 0.9, it means that only 10% of the signal is free from anomalies and you may want to discard the data from this channel.
+All these columns can serve as data selection tools. For example, if a channel has a **Fraction_of_contaminated_signal** of 0.9, it means that only 10% of the signal is free from anomalies and you may want to discard the data from this channel.
 The selection based on CV is proposed with three different thresholds, the choise to be more or less selective is left to the user.
 
 
