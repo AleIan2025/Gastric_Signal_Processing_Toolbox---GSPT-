@@ -30,6 +30,11 @@ To run this toolbox, you need:
     * Wavelet Toolbox
     * Fieldtrip 
 
+## GSPT flowchart
+
+<img width="8113" height="8741" alt="Pipeline_flowchart_last" src="https://github.com/user-attachments/assets/55bd8bad-5791-40b0-824f-31409366d81d" />
+
+
 ## How to Run
 
 First, ensure that the folder containing the GSPT code is visible to MATLAB. If it is not, simply run the command `addpath('YOUR\PATH')` in the Command Window, specifying the folder where the GSPT files are located on your computer.
