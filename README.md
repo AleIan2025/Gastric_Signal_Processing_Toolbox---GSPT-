@@ -44,8 +44,11 @@ If the Conditional option is selected, GSPT will run the artifact localization a
 If the Forced option is selected, the artifact localization and removal will be run by default. The latter protect from an exessive number of false positive at the expense of loosing some true positive;
 the former is more aggressive leading to a greater number of true positive at the expense of having more false positive. The choice between the two is left to the needs of the user.
 
+<img width="415" height="371" alt="MC_test_spike_anomalies_found" src="https://github.com/user-attachments/assets/9397b1a7-fca8-4a0d-8be8-ba60fb175e5e" /> <img width="415" height="371" alt="MC_spike_test" src="https://github.com/user-attachments/assets/13416fee-0a26-4fef-a86e-618dae117dff" />
+
+
 
 When control is on there will be an image generated:
-<img width="415" height="371" alt="MC_test_spike_anomalies_found" src="https://github.com/user-attachments/assets/9397b1a7-fca8-4a0d-8be8-ba60fb175e5e" />
+
 When the red line (the value of original signals IE Tsallis entropy) is significant lower than the distribution of the surrogates, then an artifact is found and GSPT proceeds to run the artifact removal algorithm
 
