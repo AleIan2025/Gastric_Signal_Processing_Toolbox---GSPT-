@@ -36,6 +36,46 @@ function [parameters_results] = MC_test_IAAWFT_v9(signal, t, fs, nSurrogates, an
     %% --- Step 2: Band-pass Filtering (0.016 - 0.16 Hz) ---
     
         signal_filt = cheb_EGG_filt(signal_10Hz, fs_10Hz);
+
+            % Transient removal (border effect mitigation)
+    border = 20;
+    if length(signal_filt) > 2*border
+        % Trim the signal and the time vector
+        signal_filt = signal_filt(border+1:end-border);
+        t_10Hz = t_10Hz(border+1:end-border);
+        
+        % Safe handling and update of the anomalies vector
+        if ~isempty(anomalies)
+            % Shift all indices to account for the removed left border
+            anomalies = anomalies - border;
+            
+            if mod(length(anomalies), 2) == 0
+                % Process anomalies as pairs: [start1, end1, start2, end2, ...]
+                valid_anomalies = [];
+                for k = 1:2:length(anomalies)-1
+                    s_idx = anomalies(k);
+                    e_idx = anomalies(k+1);
+                    
+                    % Discard the anomaly if it falls entirely within the removed borders
+                    if e_idx < 1 || s_idx > length(signal_filt)
+                        continue; 
+                    end
+                    
+                    % Constrain start and end indices to the new signal boundaries
+                    s_adj = max(1, s_idx);
+                    e_adj = min(length(signal_filt), e_idx);
+                    
+                    % Append the adjusted valid pair
+                    valid_anomalies = [valid_anomalies, s_adj, e_adj];
+                end
+                % Overwrite the anomalies vector for downstream use
+                anomalies = valid_anomalies;
+            else
+                % Fallback for single-index arrays
+                anomalies = anomalies(anomalies > 0 & anomalies <= length(signal_filt));
+            end
+        end
+    end
     
     %% --- Step 3: Artifact Masking & Reconstruction ---
     mask_10Hz = false(size(signal_filt));
