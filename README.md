@@ -38,8 +38,11 @@ Once you correctly modify these lines, a window will appear as you can see in th
 
 
 You can now choose to run GSPT with a 
-* preliminary check on the existence of movent or spike-like artifacts in the given channel based on Monte Carlo Randopm Shuffling surrogate testing (RP)
-* no preliminary check ()
+* preliminary check on the existence of movent or spike-like artifacts in the given channel based on Monte Carlo Randopm Shuffling surrogate testing: Conditional (RP control)
+* no preliminary check: Forced (always localize)
+If the Conditional option is selected, GSPT will run the artifact localization and removal algorithm only if the MC test finds that the signal is affected by movement or spike-like artifacts.
+If the Forced option is selected, the artifact localization and removal will be run by default. The latter protect from an exessive number of false positive at the expense of loosing some true positive;
+the former is more aggressive leading to a greater number of true positive at the expense of having more false positive. The choice between the two is left to the needs of the user.
 
 
 When control is on there will be an image generated:
