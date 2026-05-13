@@ -34,25 +34,8 @@ function [parameters_results] = MC_test_IAAWFT_v9(signal, t, fs, nSurrogates, an
     end
     
     %% --- Step 2: Band-pass Filtering (0.016 - 0.16 Hz) ---
-    if exist('cheb_EGG_filt', 'file')
-        signal_filt = cheb_EGG_filt(signal_10Hz, fs_10Hz);
-    else
-        % Fallback to standard IIR if custom filter is missing
-        bp = designfilt('bandpassiir','FilterOrder',4, ...
-            'HalfPowerFrequency1',0.016,'HalfPowerFrequency2',0.16, 'SampleRate',fs_10Hz);
-        signal_filt = filtfilt(bp, signal_10Hz);
-    end
     
-    % Transient removal (border effect mitigation)
-    border = 20;
-    if length(signal_filt) > 2*border
-        signal_filt = signal_filt(border+1:end-border);
-        t_10Hz = t_10Hz(border+1:end-border);
-        if ~isempty(anomalies)
-            anomalies = anomalies - border;
-            anomalies = anomalies(anomalies > 0 & anomalies <= length(signal_filt));
-        end
-    end
+        signal_filt = cheb_EGG_filt(signal_10Hz, fs_10Hz);
     
     %% --- Step 3: Artifact Masking & Reconstruction ---
     mask_10Hz = false(size(signal_filt));
