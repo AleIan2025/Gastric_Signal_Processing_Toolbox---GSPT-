@@ -16,4 +16,5 @@ To run this toolbox, you need:
 
 ## How to Run
 
-<img width="449" height="263" alt="initial_choice_pipeline" src="https://github.com/user-attachments/assets/d39a4faf-4aba-4b6c-a3eb-018abfd1eb02" />
+<img width="445" height="258" alt="initial_choice_pipeline" src="https://github.com/user-attachments/assets/3db85188-d672-4dc7-9119-3838ca3668e2" />
+
