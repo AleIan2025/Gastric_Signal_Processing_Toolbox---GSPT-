@@ -13,3 +13,7 @@ To run this toolbox, you need:
     * Predictive Maintenance Toolbox
     * Wavelet Toolbox
     * Fieldtrip 
+
+## How to Run
+
+<img width="449" height="263" alt="initial_choice_pipeline" src="https://github.com/user-attachments/assets/d39a4faf-4aba-4b6c-a3eb-018abfd1eb02" />
