@@ -16,13 +16,9 @@ To run this toolbox, you need:
 
 ## How to Run
 
-First of all, make sure the folder with GSPT codes are visible to MATLAB. If they are not, you can just run the command addpat("YOUR\PATH") in the command line specifing the folder where all the GSPT are on your PC.
-
-GSPT can be run simply by the file `EGG_main_multichannel_v4_with_choice` by modifiyng according to you needs the lines of code inside the red boxed in the following figure:
-
 First, ensure that the folder containing the GSPT code is visible to MATLAB. If it is not, simply run the command `addpath('YOUR\PATH')` in the Command Window, specifying the folder where the GSPT files are located on your computer.
 
-You can run GSPT using the script `EGG_main_multichannel_v4_with_choice`. Please modify the lines of code highlighted in the red boxes in the figure below to suit your needs.
+You can run GSPT using the script `EGG_main_multichannel_v4_with_choice`. Before running it, ensure you update the lines of code highlighted in the red boxes in the figure below to suit your needs.
 
 <img width="530" height="460" alt="initial_lines" src="https://github.com/user-attachments/assets/a2e45fda-96ff-49a4-8a95-588e52bc7fdf" />
 
@@ -36,6 +32,16 @@ Eventually, you will also need to change the cfg.channel structure to adapt it t
 You can also select channels in different ways, like selecting them all or select them characterized by a common identifier.
 
 Once you correctly modify these lines, a window will appear as you can see in the figure below:
+
+These parameters are, respectively:
+
+* Output folder: The directory where gastric features will be saved across three different Excel files. You can choose any path on your PC.
+* FieldTrip path: The location of the FieldTrip toolbox on your computer.
+* Dataset path: The path to the dataset you wish to analyze.
+
+Additionally, you may need to modify the `cfg.channel` structure to match the channel names of your specific recording. You can select channels in several ways, such as selecting all of them or filtering them by a common identifier.
+
+Once these lines have been correctly modified, a window will appear as shown in the figure below:
 
 
 <img width="445" height="258" alt="initial_choice_pipeline" src="https://github.com/user-attachments/assets/3db85188-d672-4dc7-9119-3838ca3668e2" />
