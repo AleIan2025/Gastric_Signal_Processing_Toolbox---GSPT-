@@ -18,7 +18,7 @@ To run this toolbox, you need:
 
 GSPT can be run simply by the file EGG_main_multichannel_v4_with_choice by modifiyng according to you needs the lines of code inside the red boxed in the following figure:
 
-<img width="548" height="467" alt="initial_lines" src="https://github.com/user-attachments/assets/eee25152-aa43-460e-8cc2-e543fc0c6c68" />
+<img width="530" height="460" alt="initial_lines" src="https://github.com/user-attachments/assets/a2e45fda-96ff-49a4-8a95-588e52bc7fdf" />
 
 These are respectively:
 
