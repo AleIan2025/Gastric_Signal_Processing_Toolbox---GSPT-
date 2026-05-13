@@ -104,11 +104,10 @@ cfg.channel = {'egg1', 'egg2', 'egg3', 'egg4'};
 % Extract channel names for subsequent use during data export
 channel_names = cfg.channel;
 % load the datas
-%EGG_raw = ft_preprocessing(cfg);
+EGG_raw = ft_preprocessing(cfg);
 nCh = numel(cfg.channel); % number of channels
 dataset_name = cfg.dataset;
-% Numero di canali
-%fprintf('%d EGG channels loaded: %s\n', nCh, strjoin(cfg.channel, ', '));
+
 
 %% 2. REMOVE HIGH-FREQUENCY SPIKES
 disp('Removing high-frequency spikes...')
