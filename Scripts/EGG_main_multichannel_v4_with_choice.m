@@ -83,7 +83,7 @@ ft_defaults;
 % ⚠️ Update the path below to match your local data path
 cfg = [];
 
-cfg.dataset='C:\Users\aless\Downloads\Clean_example.eeg';
+cfg.dataset='C:\Users\aless\Downloads\Example_Clean.eeg';
 
 % ⚠️ Channel selection can be done in several ways.
 % By default, all available channels are selected.
