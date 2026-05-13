@@ -1,12 +1,12 @@
 # Gastric-Signal-Processing-Toolbox (GSPT)
 
-**GSPT** is a complete and fully automated pipeline for Electrogastrography (EGG) data analysis. Starting from raw EGG data and requiring only a single main script to run with just a single button press, GSPT provides both classical single-channel metrics—such as dominant frequency and power—and advanced measures, including signal dispersion entropy, correlation dimension, and spectral entropy.
+**GSPT** is a complete and fully automated pipeline for Electrogastrography (EGG) data analysis. Starting from raw EGG data and requiring only a single main script to run with just a **single button press**, **GSPT** provides both **classical** single-channel **metrics**, such as dominant frequency and power, and **advanced measures**, including signal dispersion entropy, correlation dimension, and spectral entropy.
 
-In addition to these quantities, **GSPT** computes the instantaneous phase, amplitude, and frequency of gastric activity, alongside new measures of total correlation and multivariate entropy across all recorded channels.
+In addition to these quantities, **GSPT** computes the **instantaneous phase, amplitude, and frequency** of gastric activity, alongside new measures of **total correlation** and multivariate entropy across all recorded channels.
 
-**GSPT** supports recordings with an arbitrary number of channels and implements several processing steps, including a novel artifact localization algorithm with a tested precision of 90%. It also features two distinct methods for estimating feature reliability based on Monte Carlo surrogate testing and dominant frequency coherence between channels.
+**GSPT** supports recordings with an **arbitrary number of channels** and implements several processing steps, including a novel **artifact localization algorithm** with a tested **precision of 90%**. It also features two distinct methods for **estimating feature reliability** based on Monte Carlo surrogate testing and dominant frequency coherence between channels.
 
-By being completely automated and data-driven, **GSPT** aims to be a cornerstone for a standardized, user-friendly, and reproducible EGG processing pipeline.
+By being completely automated and data-driven, **GSPT** aims to be a cornerstone for a **standardized**, **user-friendly**, and **reproducible** EGG processing pipeline.
 
 ## Prerequisites
 
