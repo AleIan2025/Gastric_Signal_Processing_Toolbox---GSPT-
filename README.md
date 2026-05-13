@@ -22,18 +22,7 @@ You can run GSPT using the script `EGG_main_multichannel_v4_with_choice`. Before
 
 <img width="530" height="460" alt="initial_lines" src="https://github.com/user-attachments/assets/a2e45fda-96ff-49a4-8a95-588e52bc7fdf" />
 
-These are respectively:
-
-* An Output folder where gastric features will be saved in three different excel files. You can choose any path on you PC
-* The path where filedtrip is located on your PC
-* The path to the dataset you want to analysze
-
-Eventually, you will also need to change the cfg.channel structure to adapt it to the names of the channels of your recording. 
-You can also select channels in different ways, like selecting them all or select them characterized by a common identifier.
-
-Once you correctly modify these lines, a window will appear as you can see in the figure below:
-
-These parameters are, respectively:
+These are, respectively:
 
 * Output folder: The directory where gastric features will be saved across three different Excel files. You can choose any path on your PC.
 * FieldTrip path: The location of the FieldTrip toolbox on your computer.
