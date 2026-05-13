@@ -99,7 +99,7 @@ The CV-based selection is provided with three different thresholds; the choice o
 
 If you use GSPT in your research, please cite it as follows:
 
-> Iannone A., Panasiti M., Aglioti S.M., Della Penna S. (2026). GSPT: a full automated pipeline for channel-wise multi-electrod electrogastrography data analysis [Software]. Available from [https://github.com/yourusername/GSPT](https://github.com/embodied-computation-group/gastropy?tab=readme-ov-file)
+> Iannone A., Panasiti M., Aglioti S.M., Della Penna S. (2026). GSPT: a full automated pipeline for channel-wise multi-electrod electrogastrography data analysis [Software]. Available from [https://github.com/AleIan2025/Gastric-Signal-Processing-Toolbox-GSPT-](https://github.com/embodied-computation-group/gastropy?tab=readme-ov-file)
 
 BibTeX entry:
 
@@ -107,7 +107,7 @@ BibTeX entry:
 @software{GSPT2026,
   author = {Iannone Alessandro, Panasiti Maria Serena, Aglioti Salvatore Maria, Della Penna Stefania},
   title = {GSPT: Gastric Signal Processing Toolbox},
-  url = {[[https://github.com/yourusername/GSPT](https://github.com/embodied-computation-group/gastropy?tab=readme-ov-file)]([https://github.com/yourusername/GSPT](https://github.com/embodied-computation-group/gastropy?tab=readme-ov-file))},
+  url = {([https://github.com/yourusername/GSPT](https://github.com/embodied-computation-group/gastropy?tab=readme-ov-file))},
   version = {1.0.0},
   year = {2026}
 }
