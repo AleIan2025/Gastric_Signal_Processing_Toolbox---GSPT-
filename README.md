@@ -18,7 +18,7 @@ To run this toolbox, you need:
 
 First of all, make sure the folder with GSPT codes are visible to MATLAB. If they are not, you can just run the command addpat("YOUR\PATH") in the command line specifing the folder where all the GSPT are on your PC.
 
-GSPT can be run simply by the file __EGG_main_multichannel_v4_with_choice__ by modifiyng according to you needs the lines of code inside the red boxed in the following figure:
+GSPT can be run simply by the file `EGG_main_multichannel_v4_with_choice` by modifiyng according to you needs the lines of code inside the red boxed in the following figure:
 
 <img width="530" height="460" alt="initial_lines" src="https://github.com/user-attachments/assets/a2e45fda-96ff-49a4-8a95-588e52bc7fdf" />
 
