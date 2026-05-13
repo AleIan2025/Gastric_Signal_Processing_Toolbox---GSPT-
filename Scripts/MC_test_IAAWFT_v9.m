@@ -216,8 +216,11 @@ function plot_quality_metrics(res, surr_data)
     % Create figure with a white background
     fig = figure('Color', 'w', 'Name', 'IAAWFT Validation Results', 'Position', [100 100 1200 450]);
     
-    % Define the golden-yellow color from previous version
+    % Define the golden-yellow color
     gold_color = [0.8 0.6 0];
+    
+    % Initialize modern tiled layout (robust against resizing and legend placement)
+    tlo = tiledlayout(1, n_metrics, 'TileSpacing', 'compact', 'Padding', 'compact');
     
     for i = 1:n_metrics
         fn = fields{i};
@@ -225,8 +228,8 @@ function plot_quality_metrics(res, surr_data)
         obs = res.(fn).original_value;
         pval = res.(fn).p_value_right; % Metrics where Higher is Better
         
-        % Subplot layout
-        ax(i) = subplot(1, n_metrics, i);
+        % Advance to the next tile instead of using subplot
+        ax(i) = nexttile(tlo);
         
         % Histogram of surrogate distribution
         h_surr = histogram(dist, 25, 'FaceColor', gold_color, 'EdgeColor', 'none', 'FaceAlpha', 0.6);
@@ -235,11 +238,11 @@ function plot_quality_metrics(res, surr_data)
         % Vertical line for original signal
         h_obs = xline(obs, 'r', 'LineWidth', 2.5);
         
-        % Title and Labels
+        % Title and Labels formatting
         clean_title = upper(strrep(fn, '_', ' '));
         title_color = 'k'; 
         if pval < 0.05
-            title_color = [0 0.5 0]; % Dark green for significant
+            title_color = [0 0.5 0]; % Dark green for significance
             status_str = '*';
         else
             status_str = 'ns';
@@ -249,24 +252,25 @@ function plot_quality_metrics(res, surr_data)
               'Color', title_color, 'FontWeight', 'bold', 'FontSize', 11);
         
         xlabel('Metric Value');
-        if i == 1, ylabel('Count'); end % Only label Y axis on the first plot
+        if i == 1
+            ylabel('Count'); 
+        end 
         
         grid on; 
         set(gca, 'GridAlpha', 0.2);
         
-        % Dynamic X-axis margins to ensure visibility of the red line
+        % Dynamic X-axis margins to ensure visibility of the empirical observation
         all_vals = [dist(:); obs];
         range_vals = max(all_vals) - min(all_vals);
         xlim([min(all_vals) - 0.1*range_vals, max(all_vals) + 0.1*range_vals]);
     end
     
-    % --- Fixed Global Legend ---
-    % Create a single legend for the entire figure, placed at the bottom
-    lgd = legend([h_surr, h_obs], {'WIAAFT Surrogates', 'Original Signal'}, ...
+    % --- Fixed Global Legend via TiledLayout ---
+    % Create a single legend attached to the layout, not to a specific axis
+    lgd = legend(ax(n_metrics), [h_surr, h_obs], {'WIAAFT Surrogates', 'Original Signal'}, ...
         'Orientation', 'horizontal', ...
-        'Location', 'southoutside', ...
         'FontSize', 10);
     
-    % Adjust position slightly to ensure it doesn't overlap with x-labels
-    lgd.Position(2) = 0.02; 
+    % Assign the legend to the shared south tile of the entire layout
+    lgd.Layout.Tile = 'south'; 
 end
