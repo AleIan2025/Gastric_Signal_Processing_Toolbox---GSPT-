@@ -1,3 +1,12 @@
+
+
+
+<img width="1398" height="752" alt="GSPT_logo" src="https://github.com/user-attachments/assets/0a97c0d1-59d0-46a0-9612-54358fce7b5c" />
+
+
+
+
+
 # Gastric-Signal-Processing-Toolbox (GSPT)
 
 **GSPT** is a complete and fully automated pipeline for Electrogastrography (EGG) data analysis. Starting from raw EGG data and requiring only a single main script to run with just a **single button press**, **GSPT** provides both **classical** single-channel **metrics**, such as dominant frequency and power, and **advanced measures**, including signal dispersion entropy, correlation dimension, and spectral entropy.
