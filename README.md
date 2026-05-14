@@ -29,6 +29,7 @@ To run this toolbox, you need:
 * **MATLAB** (version R2023a or later)
 * The following **MATLAB Toolboxes**:
     * Signal Processing Toolbox
+    * Audio Toolbox
     * Optimization Toolbox
     * System Identification Toolbox
     * Statistics and Machine Learning Toolbox
