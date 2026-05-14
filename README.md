@@ -30,6 +30,7 @@ To run this toolbox, you need:
 * The following **MATLAB Toolboxes**:
     * Signal Processing Toolbox
     * Optimization Toolbox
+    * System Identification Toolbox
     * Statistics and Machine Learning Toolbox
     * Econometrics Toolbox
     * Predictive Maintenance Toolbox
