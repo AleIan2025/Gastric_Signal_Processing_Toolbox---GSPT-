@@ -62,7 +62,7 @@ function [filt_buff, filtered_signal, an_edges_filt_opt] = find_anomalies_Tuk_CO
     % Fissiamo il seed per garantire riproducibilità totale al 100%
     %old_rng = rng('twister'); 
     
-    rng('twister'); 
+    rng('default'); 
     [~, ~, scores] = rrcforest(filtered_signal, ...
         ContaminationFraction = sum(r1) / length(r1), ...
         CollusiveDisplacement = "maximal", ...  % Ottimizzato per artefatti contigui
