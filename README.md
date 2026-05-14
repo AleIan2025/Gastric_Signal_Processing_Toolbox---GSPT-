@@ -30,6 +30,7 @@ To run this toolbox, you need:
 * The following **MATLAB Toolboxes**:
     * Signal Processing Toolbox
     * Audio Toolbox
+    * DSP System Toolbox
     * Optimization Toolbox
     * System Identification Toolbox
     * Statistics and Machine Learning Toolbox
