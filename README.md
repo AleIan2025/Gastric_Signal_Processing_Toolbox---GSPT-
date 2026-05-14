@@ -80,7 +80,7 @@ Once GSPT has finished, it will save three different files in your selected Outp
 
 * **Single_channel_parameters**: A collection of features describing each channel individually. This includes classical metrics, such as the dominant frequency, as well as more advanced measures like TFR Renyi Entropy and the Lyapunov exponent.
 * **Total_correlation_and_multivariate_entropies**: Metrics describing the overall correlation and complexity across all recorded channels.
-* **Instantaneous_curves**: The instantaneous Phase, Frequency, and Amplitude of the fundamental normogastric components.
+* **Instantaneous_curves**: The instantaneous Phase, Frequency, and Amplitude of the fundamental normogastric component.
 
 In addition to the gastric features, the **Single_channel_parameters** file also contains several other important columns:
 
