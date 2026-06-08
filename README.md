@@ -97,6 +97,28 @@ All these columns serve as data selection tools. For example, if a channel has a
 The CV-based selection is provided with three different thresholds; the choice of being more or less conservative is left to the user's discretion.
 
 
+## An overview on the gastric features
+
+GPPT calculates a total of 32 single channel features, 3 single channel instantaneous curves (amplitude, phase and frequency) and 6 multichannel metrics and 3. The 32 singla channel features can be organized as follows:
+
+* Power Spectrum Density (PSD) features:
+  * Dominant frequency and power
+  * Spectral Centroid
+  * Spectral Spread
+  * Sectral entropy
+  * PSD Tsallis Entropy
+* Time frequency representation (TFR) features:
+  * Renyi entropy
+  * Hoywer measure
+  * Gradient entropy
+  * Relative gradient entropy  
+* Filtered signal features:
+  * Signal dispersion entropy
+  * Signal sample entropy
+  * Correlation Dimension
+  * Maximum Lyapunov exponent
+  * Detrend Fluctuation Analysis (DFA) exponent
+  * Active Information Storage (AIS)
 
 ## Citation
 
