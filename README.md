@@ -101,7 +101,7 @@ The CV-based selection is provided with three different thresholds; the choice o
 
 **GSPT** calculates a total of 32 single channel features, 3 single channel instantaneous curves (amplitude, phase and frequency) and 6 multichannel metrics. 
 
-### Sigle channel features
+### Single channel features
 The 32 single channel features can be organized as follows:
 
 * **Power Spectrum Density (PSD)** features:
