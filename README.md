@@ -99,17 +99,17 @@ The CV-based selection is provided with three different thresholds; the choice o
 
 ## An overview on the gastric features
 
-GPPT calculates a total of 32 single channel features, 3 single channel instantaneous curves (amplitude, phase and frequency) and 6 multichannel metrics and 3. The 32 singla channel features can be organized as follows:
+**GSPT** calculates a total of 32 single channel features, 3 single channel instantaneous curves (amplitude, phase and frequency) and 6 multichannel metrics. The 32 singla channel features can be organized as follows:
 
 * Power Spectrum Density (PSD) features:
-  * Spectral descriptors. They quantify some key features of the PSD
-     * Dominant frequency (DF) & power (DP. Classical quantities. They provide a good summary of the PSD when the signal exhibits a single strong peak.             However, distinct PSDs can share the same DF and DP despite having very different shapes (Figure F1)
-     * Spectral Centroid (SC) & Spread (SS). The "the center of mass of the PSD (Centroid) and its dispersion around it (Spread).  
-     * Sectral (SE) & Tsallis (PSD TE) entropy. They measure how much the PSD is dispersed.
-  * Spectral powers. They quantify the power in specific spectral bands: the traditional ones are bradigastria (0.016-0.033 Hz), normogastria (0.033-0.067       Hz) tachigastria (0.067 - 0.16 Hz). We also introduces **adaptive bands** centered around the DF value: the domianant band (DF\pm 0.015 Hz), Subdominant     band (0.016 - DF-0.015 Hz), Superdomianant band (DF+0.015 - 0.016 Hz)
-     * Total normogastric, bradigastric and tachigastric powers. Just the sum of the power in theri respective bands.
-     * Mean relative normogastric, bradigastric and tachigastric powers. Powers normalized by the total power (after dividing for the width of the freqeuncy        band to account for the different power of the noise). They have values between 0 and 1
-     * Mean relative Dominant, Subdominant and Superdominant powers. They are essentially SNR ratios between the powers in different bandds      
+  * **Spectral descriptors**. They quantify some key features of the PSD
+     * **Dominant frequency (DF) & power (DP)**. Classical quantities. They provide a good summary of the PSD when the signal exhibits a single strong peak.             However, distinct PSDs can share the same DF and DP despite having very different shapes (Figure F1)
+     * **Spectral Centroid (SC) & Spread (SS)**. The "the center of mass of the PSD (Centroid) and its dispersion around it (Spread).  
+     * **Spectral (SE) & Tsallis (PSD TE) entropy**. They measure how much the PSD is dispersed.
+     * **Spectral powers**. They quantify the power in specific spectral bands: the traditional ones are **bradigastria (0.016-0.033 Hz)**, **normogastria          (0.033-0.067 Hz)** and **tachigastria (0.067 - 0.16 Hz)**. We also introduces **adaptive bands** centered around the DF value: the **Domianant band          (DF\pm 0.015 Hz)**, the **Subdominant band (0.016 - DF-0.015 Hz)** and the **Superdomianant band (DF+0.015 - 0.016 Hz)**
+     * **Total normogastric, bradigastric and tachigastric powers**. Just the sum of the power in theri respective bands.
+     * **Mean relative normogastric, bradigastric and tachigastric powers**. Powers normalized by the total power (after dividing for the width of the              frequency band to account for the different power of the noise). They have values between 0 and 1
+     * **Mean relative Dominant, Subdominant and Superdominant powers**. They are essentially SNR ratios between the powers in different bandds      
 * Time frequency representation (TFR) features:
   * Renyi entropy
   * Hoyer measure
