@@ -161,9 +161,10 @@ The total correlation is the amount of information shared among the variables in
 Figure F5. The concept of total correlation with Venn Diagrams. The more the system contains shared information between the channels, the more is their Total Correlation.
 
 
+
 GSPT computes total correlations for different quantities, such as the instantaneous amplitude and phase of the different channels, among others.
 
-Multivariate entropy represents the total amount of unique information contained within the entire set of variables, effectively quantifying the overall complexity of the network.
+GSPT alsto computes multivariate entropies. They represent the total amount of unique information contained within the entire set of variables, effectively quantifying the overall complexity of the network.
 
 In terms of the Venn diagrams in Figure F5, multivariate entropy corresponds to the total area covered by all the circles combined:
 
