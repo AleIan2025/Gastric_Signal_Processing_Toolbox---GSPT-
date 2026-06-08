@@ -153,6 +153,17 @@ Instantaneous quantities are becoming increasingly important in neuroscience aft
 Figure F4. Reconstructed fundamental gastric component from a real EGG recorded signal together with its 3 instantaneous quantities: instantaneous amplitude, phase and frequency.
 
 
+### Total correlations
+
+The total correlation is the amount of information shared among the variables in the set, or their redundancy. This concept applied to time series is depicted in Figure F5.
+
+<img width="8400" height="5100" alt="total_correlation_concept_global_legend_labeled" src="https://github.com/user-attachments/assets/0b38f64e-d8d5-4a6e-977b-d6b43ce97e42" />
+Figure F5. The concept of total correlation. The more the system contains shared information between the channels, the more is their Total Correlation.
+
+
+GSPT computes total correlations for different quantities, such as the instantaneous amplitude and phase of the different channels, among others.
+
+
 
 
 
