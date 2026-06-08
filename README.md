@@ -113,7 +113,7 @@ The 32 single channel features can be organized as follows:
      * **Total normogastric, bradigastric and tachigastric powers**. Computed as the absolute sum of the power across their specific frequency bands.
      * **Mean relative normogastric, bradigastric and tachigastric powers**. the ratio of the mean power density in a specific band (e.g., the normogastric         band) to the sum of the mean power densities across the bradygastria, normogastria, and tachygastria bands. It takes values between 0 and 1. The             power in each band is divided by its frequency width (hence the term "mean" power density) to account for different noise powers across bands.
      * **Mean relative Dominant, Subdominant and Superdominant powers**. These are essentially signal-to-noise ratios (SNRs) comparing the mean power in            different frequency bands
-* Feature related to the **TFR ridge points**:
+* Features related to the **TFR ridge points**:
   * **Fraction of normogastria**. Here, it is defined as the ratio of the portion of the instantaneous frequency (IF) curve that falls within the                normogastric frequency band (0.033–0.067 Hz) to the total length of the curve (Figure F2).
   * **Mean ridge frequency**
   * **Ridge frequency standard deviation** 
