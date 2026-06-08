@@ -120,8 +120,7 @@ GPPT calculates a total of 32 single channel features, 3 single channel instanta
   * Detrend Fluctuation Analysis (DFA) exponent
   * Active Information Storage (AIS)
  
-<img width="7200" height="6000" alt="spectral_descriptors" src="https://github.com/user-attachments/assets/1a5b6010-3e52-4a38-889a-24a2a60e47bf" />
-
+<img width="7200" height="6000" alt="spectral_descriptors_wow" src="https://github.com/user-attachments/assets/3d15a3e8-2662-4842-b642-624e05954437" />
 
 ## Citation
 
