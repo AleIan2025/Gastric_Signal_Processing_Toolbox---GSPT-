@@ -102,7 +102,7 @@ The CV-based selection is provided with three different thresholds; the choice o
 **GSPT** calculates a total of 32 single channel features, 3 single channel instantaneous curves (amplitude, phase and frequency) and 6 multichannel metrics. 
 
 ### Sigle channel features
-The 32 singla channel features can be organized as follows:
+The 32 single channel features can be organized as follows:
 
 * Power Spectrum Density (PSD) features:
   * **Spectral descriptors**. They quantify some key features of the PSD
@@ -112,7 +112,7 @@ The 32 singla channel features can be organized as follows:
      * **Spectral powers**. They quantify the power in specific spectral bands: the traditional ones are **bradigastria (0.016-0.033 Hz)**, **normogastria          (0.033-0.067 Hz)** and **tachigastria (0.067 - 0.16 Hz)**. We also introduces **adaptive bands** centered around the DF value: the **Domianant band          (DF $\pm 0.015$ Hz)**, the **Subdominant band (0.016, DF-0.015 Hz)** and the **Superdomianant band (DF+0.015, 0.016 Hz)**
      * **Total normogastric, bradigastric and tachigastric powers**. Computed as the absolute sum of the power across their specific frequency bands.
      * **Mean relative normogastric, bradigastric and tachigastric powers**. the ratio of the mean power density in a specific band (e.g., the normogastric         band) to the sum of the mean power densities across the bradygastria, normogastria, and tachygastria bands. It takes values between 0 and 1. The             power in each band is divided by its frequency width (hence the term "mean" power density) to account for different noise powers across bands.
-     * **Mean relative Dominant, Subdominant and Superdominant powers**. They are essentially SNR ratios between the powers in different bandds
+     * **Mean relative Dominant, Subdominant and Superdominant powers**. These are essentially signal-to-noise ratios (SNRs) comparing the mean power in            different frequency bands
 * Feature related to the TFR ridge points:
   * **Fraction of normogastria**. Here, it is defined as the ratio of the portion of the instantaneous frequency (IF) curve that falls within the                normogastric frequency band (0.033–0.067 Hz) to the total length of the curve (Figure F2).
   * **Mean ridge frequency**
