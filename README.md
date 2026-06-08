@@ -122,7 +122,7 @@ GPPT calculates a total of 32 single channel features, 3 single channel instanta
  
 <img width="7200" height="6000" alt="spectral_descriptors_wow" src="https://github.com/user-attachments/assets/3d15a3e8-2662-4842-b642-624e05954437" />
 
-<img width="2240" height="1219" alt="ridge_superlet_curve_sub_07" src="https://github.com/user-attachments/assets/85693f50-5529-4e5e-acd4-138c2ebec565" />  <img width="1950" height="1050" alt="hajar_subject_ch_2_raw" src="https://github.com/user-attachments/assets/3c4997b9-407a-45d0-9eb4-49876e810e9b" />
+<img width="1901" height="580" alt="Low Renyi entropy" src="https://github.com/user-attachments/assets/451ada8f-5a03-475a-b7b4-58db82faf2db" />
 
 
 
