@@ -114,16 +114,16 @@ The 32 singla channel features can be organized as follows:
      * **Mean relative normogastric, bradigastric and tachigastric powers**. Powers normalized by the total power (after dividing for the width of the              frequency band to account for the different power of the noise). They have values between 0 and 1
      * **Mean relative Dominant, Subdominant and Superdominant powers**. They are essentially SNR ratios between the powers in different bandds
 * Feature related to the TFR ridge points:
-  * **Fraction of normogastria**. Here defined as the ratio between the portion of the instantaneous frequency curve (IF) that is in the normogastric            frequency band (0.033-0.067 Hz) and the total lenght of the curve (Figure F2)
+  * **Fraction of normogastria**. Here, it is defined as the ratio of the portion of the instantaneous frequency (IF) curve that falls within the                normogastric frequency band (0.033–0.067 Hz) to the total length of the curve (Figure F2).
   * **Mean ridge frequency**
   * **Ridge frequency standard deviation** 
-* **Signal's Instantaneous energy (IE)** features. IE is a curve that evolves in time. Its variability can be carachterize via standard deviation or its       entropy
+* **Signal's Instantaneous energy (IE)** features. The IE is a curve that evolves over time. Its variability can be characterized by its standard deviation    or entropy.
   * **Mean energy**
   * **Energy standard deviation**
   * **Energy dispersion (IEDisp) & sample (IESamp) entropies**. The higher the entropies, the higher IE vairibility.
-* **Time frequency representation (TFR)** features. They consider the whole TFR combining thus the frequency and time dimensions. The can quantify the         sparsity or concentration of the TFR or also its regulatity
-  * **Renyi entropy (RE)**. High RE means the signal energy is scattered in many time and frequency intervals (Figure F3)
-  * **Hoyer measure (HM)**. High HM means the TFR is sparser (Figure F3).
+* **Time-frequency representation (TFR)** features. They consider the whole TFR, thus combining the time and frequency dimensions. They can quantify the       sparsity, concentration, or regularity of the TFR.
+  * **Renyi entropy (RE)**. A high RE indicates that the signal energy is scattered across multiple time and frequency intervals (Figure F3).
+  * **Hoyer measure (HM)**. A high HM means the TFR is sparser (Figure F3).
   * **Gradient entropy (GE)**. Considers the TFR as an image and compute the granularity of its texture.
   * **Relative gradient entropy (rGE)**  
 * Filtered signal features:
@@ -139,10 +139,10 @@ The 32 singla channel features can be organized as follows:
 Figure F1. An example of two different PSDs with the same DF and DP. SC, SS, SE (and PSD TE, not shown here) capture this difference.
 
  <img width="2240" height="1219" alt="ridge_superlet_curve_sub_07" src="https://github.com/user-attachments/assets/8516e554-81b4-4a92-a7ef-5afc930fbd7f" />
- Figure F2. Ridge point ar the point where the TFR has the maximum values. The IF curves is obtained by these points with curvature constraints (we expect instantaneous frequency to be a smooth curve with no suddent jumps). In this example the entire IF curve (black line) lies in the normogastric band, thus the fraction of normogastria is 1.
+ Figure F2. Ridge points are the points where the TFR reaches its maximum values. The IF curve is obtained from these points using curvature constraints (we expect the instantaneous frequency to be a smooth curve with no sudden jumps). In this example, the entire IF curve (black line) lies within the normogastric band; thus, the fraction of normogastria is 1.
 
 <img width="1901" height="580" alt="Low Renyi entropy" src="https://github.com/user-attachments/assets/451ada8f-5a03-475a-b7b4-58db82faf2db" />
-Figure F3. A TFR for an EGG signal obtained via the Superlet Transform. On the left, the TFR for a simple, clean signal. On the right, the TFR for a complex and variable signal.
+Figure F3. Time-frequency representation (TFR) of an EGG signal obtained via the Superlet Transform. On the left, the TFR of a simple, clean signal. On the right, the TFR of a complex and variable signal.
 
 
 ### Instantaneous quantities
@@ -150,6 +150,7 @@ Figure F3. A TFR for an EGG signal obtained via the Superlet Transform. On the l
 Instantaneous quantities are becoming increasingly important in neuroscience after the discovery of a gastric network coupling stomach activity with brain dynamics. Here, we extract these instantaneous curves of the fundamental gastric component via ridge points, outperforming current Hilbert transform-based approaches. An example of the extracted curves from an EGG signal is shown in Figure F4.
 
 <img width="1609" height="877" alt="Inst_curvevs" src="https://github.com/user-attachments/assets/ef3be2f3-45da-4007-8e44-b691fb2146d4" />
+Figure F4. Reconstructed fundamental gastric component from a real EGG recorded signal together with its 3 instantaneous quantities: instantaneous amplitude, phase and frequency.
 
 
 
