@@ -109,7 +109,7 @@ GPPT calculates a total of 32 single channel features, 3 single channel instanta
   * PSD Tsallis Entropy
 * Time frequency representation (TFR) features:
   * Renyi entropy
-  * Hoywer measure
+  * Hoyer measure
   * Gradient entropy
   * Relative gradient entropy  
 * Filtered signal features:
@@ -119,6 +119,9 @@ GPPT calculates a total of 32 single channel features, 3 single channel instanta
   * Maximum Lyapunov exponent
   * Detrend Fluctuation Analysis (DFA) exponent
   * Active Information Storage (AIS)
+ 
+<img width="7200" height="6000" alt="spectral_descriptors" src="https://github.com/user-attachments/assets/1a5b6010-3e52-4a38-889a-24a2a60e47bf" />
+
 
 ## Citation
 
