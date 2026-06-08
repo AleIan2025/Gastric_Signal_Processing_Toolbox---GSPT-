@@ -104,7 +104,7 @@ The CV-based selection is provided with three different thresholds; the choice o
 ### Sigle channel features
 The 32 single channel features can be organized as follows:
 
-* Power Spectrum Density (PSD) features:
+* **Power Spectrum Density (PSD)** features:
   * **Spectral descriptors**. They quantify some key features of the PSD
      * **Dominant frequency (DF) & power (DP)**. Classical quantities. They provide a good summary of the PSD when the signal exhibits a single strong peak.             However, distinct PSDs can share the same DF and DP despite having very different shapes (Figure F1)
      * **Spectral Centroid (SC) & Spread (SS)**. The "the center of mass of the PSD (Centroid) and its dispersion around it (Spread).  
@@ -113,7 +113,7 @@ The 32 single channel features can be organized as follows:
      * **Total normogastric, bradigastric and tachigastric powers**. Computed as the absolute sum of the power across their specific frequency bands.
      * **Mean relative normogastric, bradigastric and tachigastric powers**. the ratio of the mean power density in a specific band (e.g., the normogastric         band) to the sum of the mean power densities across the bradygastria, normogastria, and tachygastria bands. It takes values between 0 and 1. The             power in each band is divided by its frequency width (hence the term "mean" power density) to account for different noise powers across bands.
      * **Mean relative Dominant, Subdominant and Superdominant powers**. These are essentially signal-to-noise ratios (SNRs) comparing the mean power in            different frequency bands
-* Feature related to the TFR ridge points:
+* Feature related to the **TFR ridge points**:
   * **Fraction of normogastria**. Here, it is defined as the ratio of the portion of the instantaneous frequency (IF) curve that falls within the                normogastric frequency band (0.033–0.067 Hz) to the total length of the curve (Figure F2).
   * **Mean ridge frequency**
   * **Ridge frequency standard deviation** 
@@ -126,7 +126,7 @@ The 32 single channel features can be organized as follows:
   * **Hoyer measure (HM)**. A high HM means the TFR is sparser (Figure F3).
   * **Gradient entropy (GE)**. Considers the TFR as an image and compute the granularity of its texture.
   * **Relative gradient entropy (rGE)**. Same as GE, but compares the irregularity in the dominant band with that in the rest of the TFR.  
-* Filtered signal features:
+* **Filtered gastric signal (0.016-0.16 Hz)** features:
   * **Entropies**. The higher the entropy, the more irregular is the gastric signal
     * **Signal dispersion (SigDisp) & sample (SigSamp) entropy**
   * **Dynamical systems** quantities: 
