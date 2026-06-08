@@ -99,7 +99,10 @@ The CV-based selection is provided with three different thresholds; the choice o
 
 ## An overview on the gastric features
 
-**GSPT** calculates a total of 32 single channel features, 3 single channel instantaneous curves (amplitude, phase and frequency) and 6 multichannel metrics. The 32 singla channel features can be organized as follows:
+**GSPT** calculates a total of 32 single channel features, 3 single channel instantaneous curves (amplitude, phase and frequency) and 6 multichannel metrics. 
+
+### Sigle channel features
+The 32 singla channel features can be organized as follows:
 
 * Power Spectrum Density (PSD) features:
   * **Spectral descriptors**. They quantify some key features of the PSD
@@ -125,12 +128,12 @@ The CV-based selection is provided with three different thresholds; the choice o
   * **Relative gradient entropy (rGE)**  
 * Filtered signal features:
   * **Entropies**:
-   * **Signal dispersion (SigDisp) & sample (SigSamp) entropy**
+    * **Signal dispersion (SigDisp) & sample (SigSamp) entropy**
   * **Dynamical systems** quantities: 
-   * **Correlation Dimension**
-   * **Maximum Lyapunov exponent**
-   * **Detrend Fluctuation Analysis (DFA) exponent**
-   * **Active Information Storage (AIS)**
+    * **Correlation Dimension**
+    * **Maximum Lyapunov exponent**
+    * **Detrend Fluctuation Analysis (DFA) exponent**
+    * **Active Information Storage (AIS)**
  
 <img width="7200" height="6000" alt="spectral_descriptors_wow" src="https://github.com/user-attachments/assets/3d15a3e8-2662-4842-b642-624e05954437" />
 Figure F1. An example of two different PSDs with the same DF and DP. SC, SS, SE (and PSD TE, not shown here) capture this difference.
@@ -140,6 +143,10 @@ Figure F1. An example of two different PSDs with the same DF and DP. SC, SS, SE 
 
 <img width="1901" height="580" alt="Low Renyi entropy" src="https://github.com/user-attachments/assets/451ada8f-5a03-475a-b7b4-58db82faf2db" />
 Figure F3. A TFR for an EGG signal obtained via the Superlet Transform. On the left, the TFR for a simple, clean signal. On the right, the TFR for a complex and variable signal.
+
+
+### Instantaneous quantities
+
 
 
 
