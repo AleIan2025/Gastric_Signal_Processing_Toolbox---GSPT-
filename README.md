@@ -127,14 +127,16 @@ The CV-based selection is provided with three different thresholds; the choice o
   * **Entropies**:
    * **Signal dispersion (SigDisp) & sample (SigSamp) entropy**
   * **Dynamical systems** quantities: 
-  * **Correlation Dimension**
-  * **Maximum Lyapunov exponent**
-  * **Detrend Fluctuation Analysis (DFA) exponent**
-  * **Active Information Storage (AIS)**
+   * **Correlation Dimension**
+   * **Maximum Lyapunov exponent**
+   * **Detrend Fluctuation Analysis (DFA) exponent**
+   * **Active Information Storage (AIS)**
  
 <img width="7200" height="6000" alt="spectral_descriptors_wow" src="https://github.com/user-attachments/assets/3d15a3e8-2662-4842-b642-624e05954437" />
 Figure F1. An example of two different PSDs with the same DF and DP. SC, SS, SE (and PSD TE, not shown here) capture this difference.
 
+ <img width="2240" height="1219" alt="ridge_superlet_curve_sub_07" src="https://github.com/user-attachments/assets/8516e554-81b4-4a92-a7ef-5afc930fbd7f" />
+ Figure F2. Ridge point ar the point where the TFR has the maximum values. The IF curves is obtained by these points with curvature constraints (we expect instantaneous frequency to be a smooth curve with no suddent jumps). In this example the entire IF curve (black line) lies in the normogastric band, thus the fraction of normogastria is 1.
 
 <img width="1901" height="580" alt="Low Renyi entropy" src="https://github.com/user-attachments/assets/451ada8f-5a03-475a-b7b4-58db82faf2db" />
 Figure F3. A TFR for an EGG signal obtained via the Superlet Transform. On the left, the TFR for a simple, clean signal. On the right, the TFR for a complex and variable signal.
