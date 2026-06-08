@@ -109,12 +109,19 @@ The CV-based selection is provided with three different thresholds; the choice o
      * **Spectral powers**. They quantify the power in specific spectral bands: the traditional ones are **bradigastria (0.016-0.033 Hz)**, **normogastria          (0.033-0.067 Hz)** and **tachigastria (0.067 - 0.16 Hz)**. We also introduces **adaptive bands** centered around the DF value: the **Domianant band          (DF\pm 0.015 Hz)**, the **Subdominant band (0.016 - DF-0.015 Hz)** and the **Superdomianant band (DF+0.015 - 0.016 Hz)**
      * **Total normogastric, bradigastric and tachigastric powers**. Just the sum of the power in theri respective bands.
      * **Mean relative normogastric, bradigastric and tachigastric powers**. Powers normalized by the total power (after dividing for the width of the              frequency band to account for the different power of the noise). They have values between 0 and 1
-     * **Mean relative Dominant, Subdominant and Superdominant powers**. They are essentially SNR ratios between the powers in different bandds      
-* Time frequency representation (TFR) features:
-  * Renyi entropy
-  * Hoyer measure
-  * Gradient entropy
-  * Relative gradient entropy  
+     * **Mean relative Dominant, Subdominant and Superdominant powers**. They are essentially SNR ratios between the powers in different bandds
+* Feature related to the TFR ridge points:
+  * **Fraction of normogastria**. Here defined as the ratio between the portion of the instantaneous frequency curve (IF) that is in the normogastric            frequency band (0.033-0.067 Hz) and the total lenght of the curve (Figure F2)
+  * **Mean ridge frequency**
+  * **Ridge frequency standard deviation** 
+* **Signal's Instantaneous energy (IE)** features:
+  * **Mean energy**
+  * **Energy standard deviation**
+* **Time frequency representation (TFR)** features. They consider the whole TFR combining thus the frequency and time dimensions. The can quantify the         sparsity or concentration of the TFR or also its regulatity
+  * **Renyi entropy (RE)**. High RE means the signal energy is scattered in many time and frequency intervals (Figure F3)
+  * **Hoyer measure (HM)**. High HM means the TFR is sparser (Figure F3).
+  * **Gradient entropy (GE)**. Considers the TFR as an image and compute the granularity of its texture.
+  * **Relative gradient entropy (rGE)**  
 * Filtered signal features:
   * Signal dispersion entropy
   * Signal sample entropy
@@ -126,7 +133,9 @@ The CV-based selection is provided with three different thresholds; the choice o
 <img width="7200" height="6000" alt="spectral_descriptors_wow" src="https://github.com/user-attachments/assets/3d15a3e8-2662-4842-b642-624e05954437" />
 Figure F1. An example of two different PSDs with the same DF and DP. SC, SS, SE (and PSD TE, not shown here) capture this difference.
 
+
 <img width="1901" height="580" alt="Low Renyi entropy" src="https://github.com/user-attachments/assets/451ada8f-5a03-475a-b7b4-58db82faf2db" />
+Figure F3. A TFR for an EGG signal obtained via the Superlet Transform. On the left, the TFR for a simple, clean signal. On the right, the TFR for a complex and variable signal.
 
 
 
