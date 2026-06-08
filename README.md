@@ -125,15 +125,15 @@ The 32 singla channel features can be organized as follows:
   * **Renyi entropy (RE)**. A high RE indicates that the signal energy is scattered across multiple time and frequency intervals (Figure F3).
   * **Hoyer measure (HM)**. A high HM means the TFR is sparser (Figure F3).
   * **Gradient entropy (GE)**. Considers the TFR as an image and compute the granularity of its texture.
-  * **Relative gradient entropy (rGE)**  
+  * **Relative gradient entropy (rGE)**. Same as GE, but compares the irregularity in the dominant band with that in the rest of the TFR.  
 * Filtered signal features:
-  * **Entropies**:
+  * **Entropies**. The higher the entropy, the more irregular is the gastric signal
     * **Signal dispersion (SigDisp) & sample (SigSamp) entropy**
   * **Dynamical systems** quantities: 
-    * **Correlation Dimension**
-    * **Maximum Lyapunov exponent**
-    * **Detrend Fluctuation Analysis (DFA) exponent**
-    * **Active Information Storage (AIS)**
+    * **Correlation Dimension**. Regular periodic signals (e.g., stable heartbeats) exhibit low Correlation dimension, while chaotic systems (e.g.,                turbulent fluid flow) display higher values.
+    * **Maximum Lyapunov exponent**. A positive exponent indicates chaotic dynamics: if we identify two distinct moments in the recording where the gastric        activity is nearly identical, their subsequent temporal evolutions will still rapidly and unpredictably diverge.
+    * **Detrend Fluctuation Analysis (DFA) exponent**. Quantifies long-range correlations in time series and reflects the likelihood of a value                    increase/decrease being followed by another similar trend.
+    * **Active Information Storage (AIS)**. Quantifies the amount of information from a system’s past that is actively used to influence its present state.        High AIS implies strong dependency on historical data. 
  
 <img width="7200" height="6000" alt="spectral_descriptors_wow" src="https://github.com/user-attachments/assets/3d15a3e8-2662-4842-b642-624e05954437" />
 Figure F1. An example of two different PSDs with the same DF and DP. SC, SS, SE (and PSD TE, not shown here) capture this difference.
