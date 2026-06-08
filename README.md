@@ -153,15 +153,22 @@ Instantaneous quantities are becoming increasingly important in neuroscience aft
 Figure F4. Reconstructed fundamental gastric component from a real EGG recorded signal together with its 3 instantaneous quantities: instantaneous amplitude, phase and frequency.
 
 
-### Total correlations
+### Total correlations & Multivariate Entropies
 
 The total correlation is the amount of information shared among the variables in the set, or their redundancy. This concept applied to time series is depicted in Figure F5.
 
 <img width="8400" height="5100" alt="total_correlation_concept_global_legend_labeled" src="https://github.com/user-attachments/assets/0b38f64e-d8d5-4a6e-977b-d6b43ce97e42" />
-Figure F5. The concept of total correlation. The more the system contains shared information between the channels, the more is their Total Correlation.
+Figure F5. The concept of total correlation with Venn Diagrams. The more the system contains shared information between the channels, the more is their Total Correlation.
 
 
 GSPT computes total correlations for different quantities, such as the instantaneous amplitude and phase of the different channels, among others.
+
+Multivariate entropy represents the total amount of unique information contained within the entire set of variables, effectively quantifying the overall complexity of the network.
+
+In terms of the Venn diagrams in Figure F5, multivariate entropy corresponds to the total area covered by all the circles combined:
+
+* Left Panel (Low Total Correlation): Because the channels are independent, the circles have minimal overlap and spread out, covering a massive total area. This indicates that the network exhibits maximum global complexity and unpredictability (High ME).
+* Right Panel (High Total Correlation): Because the channels are synchronized, the circles heavily overlap and collapse onto each other. The total area covered is drastically reduced, meaning the network is highly redundant and predictable, leading to a drop in global complexity (Low ME).
 
 
 
