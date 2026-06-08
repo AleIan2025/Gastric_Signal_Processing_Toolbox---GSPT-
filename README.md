@@ -114,21 +114,23 @@ The CV-based selection is provided with three different thresholds; the choice o
   * **Fraction of normogastria**. Here defined as the ratio between the portion of the instantaneous frequency curve (IF) that is in the normogastric            frequency band (0.033-0.067 Hz) and the total lenght of the curve (Figure F2)
   * **Mean ridge frequency**
   * **Ridge frequency standard deviation** 
-* **Signal's Instantaneous energy (IE)** features:
+* **Signal's Instantaneous energy (IE)** features. IE is a curve that evolves in time. Its variability can be carachterize via standard deviation or its       entropy
   * **Mean energy**
   * **Energy standard deviation**
+  * **Energy dispersion (IEDisp) & sample (IESamp) entropies**. The higher the entropies, the higher IE vairibility.
 * **Time frequency representation (TFR)** features. They consider the whole TFR combining thus the frequency and time dimensions. The can quantify the         sparsity or concentration of the TFR or also its regulatity
   * **Renyi entropy (RE)**. High RE means the signal energy is scattered in many time and frequency intervals (Figure F3)
   * **Hoyer measure (HM)**. High HM means the TFR is sparser (Figure F3).
   * **Gradient entropy (GE)**. Considers the TFR as an image and compute the granularity of its texture.
   * **Relative gradient entropy (rGE)**  
 * Filtered signal features:
-  * Signal dispersion entropy
-  * Signal sample entropy
-  * Correlation Dimension
-  * Maximum Lyapunov exponent
-  * Detrend Fluctuation Analysis (DFA) exponent
-  * Active Information Storage (AIS)
+  * **Entropies**:
+   * **Signal dispersion (SigDisp) & sample (SigSamp) entropy**
+  * **Dynamical systems** quantities: 
+  * **Correlation Dimension**
+  * **Maximum Lyapunov exponent**
+  * **Detrend Fluctuation Analysis (DFA) exponent**
+  * **Active Information Storage (AIS)**
  
 <img width="7200" height="6000" alt="spectral_descriptors_wow" src="https://github.com/user-attachments/assets/3d15a3e8-2662-4842-b642-624e05954437" />
 Figure F1. An example of two different PSDs with the same DF and DP. SC, SS, SE (and PSD TE, not shown here) capture this difference.
