@@ -152,13 +152,19 @@ Instantaneous quantities are becoming increasingly important in neuroscience aft
 <img width="1609" height="877" alt="Inst_curvevs" src="https://github.com/user-attachments/assets/ef3be2f3-45da-4007-8e44-b691fb2146d4" />
 Figure F4. Reconstructed fundamental gastric component from a real EGG recorded signal together with its 3 instantaneous quantities: instantaneous amplitude, phase and frequency.
 
+Analysis of the estimation errors for instantaneous phase, frequency, and amplitude in test signals across various signal-to-noise ratios (SNRs) demonstrates that the ridge method significantly outperforms the conventional approach involving the analytic signal (Figure F5).
+
+<img width="1638" height="1364" alt="Phase_Log" src="https://github.com/user-attachments/assets/0a5563e1-172f-482a-95e3-0cdc90fbd64f" />
+Figure F5. Instantaneous phase estimation errors across various SNRs. Each data point is computed from 1,000 independent noise realizations. Markers denote the mean values, and error bars represent the standard deviations.
+
+
 
 ### Total correlations & Multivariate Entropies
 
-The total correlation is the amount of information shared among the variables in the set, or their redundancy. This concept applied to time series is depicted in Figure F5.
+The total correlation is the amount of information shared among the variables in the set, or their redundancy. This concept applied to time series is depicted in Figure F6.
 
 <img width="8400" height="5100" alt="total_correlation_concept_global_legend_labeled" src="https://github.com/user-attachments/assets/0b38f64e-d8d5-4a6e-977b-d6b43ce97e42" />
-Figure F5. The concept of total correlation with Venn Diagrams. The more the system contains shared information between the channels, the more is their Total Correlation.
+Figure F6. The concept of total correlation with Venn Diagrams. The more the system contains shared information between the channels, the more is their Total Correlation.
 
 
 
