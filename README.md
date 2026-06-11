@@ -87,7 +87,15 @@ In addition to the gastric features, the **Single_channel_parameters** file also
 
 <img width="601" height="76" alt="nuovo_single_channel_excel" src="https://github.com/user-attachments/assets/6d94164a-1274-48b9-bbcc-7f72193a0ba9" />
 
-* **Fraction_of_contaminated_signal**: the ratio between the duration of time intervals labeled as anomalies (and subsequently removed) and the total length of the signal.
+**Fraction_of_contaminated_signal** is the ratio between the duration of time intervals labeled as anomalies (and subsequently removed) and the total length of the signal. The other columns represent the results of two proposed channel selection GSPT offers.
+
+## Channel selection 
+
+GSPT offers two automated algorithms to estimate the quality of an EGG recording and its channels.
+The first one is based on a Monte Carlo test with surrogates (IAAFWT).
+
+The other one is based on the Dominant Frequency (DF) coherence between the different channels of a recording.
+
 * **is_noise**: the result of a quality check via Monte Carlo surrogates (IAAFWT). If is_noise is "yes," the EGG features for that channel are not statistically distinguishable from IAAFWT noise.
 * **CV_selection_low_0.5CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 0.5 cpm (0.0083 Hz).
 * **CV_selection_low_1CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 1 cmp (0.016 Hz).
