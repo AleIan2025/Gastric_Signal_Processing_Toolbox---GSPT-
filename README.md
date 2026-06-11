@@ -96,6 +96,9 @@ In addition to the gastric features, the **Single_channel_parameters** file also
 All these columns serve as data selection tools. For example, if a channel has a *Fraction_of_contaminated_signal* of 0.9, it means that only 10% of the signal is free from anomalies, suggesting the data from this channel should likely be discarded.
 The CV-based selection is provided with three different thresholds; the choice of being more or less conservative is left to the user's discretion.
 
+<img width="8400" height="6000" alt="GSPT_Categorization_Flow" src="https://github.com/user-attachments/assets/dcb2827d-ce5e-4f77-9490-01b8dc5fdce4" />
+
+
 
 ## An overview on the gastric features
 
