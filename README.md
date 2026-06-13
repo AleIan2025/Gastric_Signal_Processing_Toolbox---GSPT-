@@ -96,9 +96,14 @@ GSPT features two automated algorithms to assess EGG recording quality.
 ### Monte Carlo (MC) surrogate slection
 
 The first is a Monte Carlo test using surrogate data (IAAFWT). The underlying logic follows three steps:
-* Surrogate Generation: Starting from the original EGG time series, the algorithm generates artificial "surrogate" time series. These act as a custom noise    model (the null hypothesis, $H_0$) specifically tailored to your actual data.
-* Feature Extraction: We calculate two spectral metrics—spectral skewness and spectral sparsity (Hoyer measure)—for both the original signal and all the       generated surrogates.
-* Statistical Testing: The metrics extracted from the surrogates create an empirical noise distribution. By comparing the original signal's metrics against    this distribution, we compute a p-value to determine if the recording contains true physiological activity or is simply background noise.
+* **Surrogate Generation**: Starting from the original EGG time series, the algorithm generates artificial "surrogate" time series. These act as a custom        noise model (the null hypothesis, $H_0$) specifically tailored to your actual data.
+* **Feature Extraction**: We calculate two spectral metrics—spectral skewness and spectral sparsity (Hoyer measure)—for both the original signal and all the    generated surrogates.
+* **Statistical Testing**: The metrics extracted from the surrogates create an empirical noise distribution. By comparing the original signal's metrics          against this distribution, we compute a p-value to determine if the recording contains true physiological activity or is simply background noise.
+
+Generating surrogate data disrupts the original Power Spectral Density (PSD), scattering its energy across a wider range of frequencies. As a result, spectral sparsity, which measures how tightly the signal's energy is concentrated within a narrow frequency band, will be significantly lower in the surrogates compared to an original signal with a clear, strong peak (a hallmark of a high-quality physiological recording). Likewise, spectral skewness, which quantifies the asymmetry of the PSD amplitude distribution across frequencies, exhibits the same behavior. As illustrated in the figure below, the few exceptionally high values characterizing the physiological peak create a heavy right tail in the distribution. Therefore, both metrics can effectively distinguish background noise from a structured signal featuring a strong dominant peak.
+
+  <img width="4200" height="2400" alt="spec_skew" src="https://github.com/user-attachments/assets/9a8825b2-8416-4ca4-a69f-669a4168d434" />
+
 
 The other one is based on the Dominant Frequency (DF) coherence between the different channels of a recording.
 
