@@ -91,8 +91,12 @@ In addition to the gastric features, the **Single_channel_parameters** file also
 
 ## Channel selection 
 
-GSPT offers two automated algorithms to estimate the quality of an EGG recording and its channels.
-The first one is based on a Monte Carlo test with surrogates (IAAFWT).
+GSPT features two automated algorithms to assess EGG recording quality. 
+
+The first is a Monte Carlo test using surrogate data (IAAFWT). The underlying logic follows three steps:
+* Surrogate Generation: Starting from the original EGG time series, the algorithm generates artificial "surrogate" time series. These act as a custom noise    model (the null hypothesis, $H_0$) specifically tailored to your actual data.
+* Feature Extraction: We calculate two spectral metrics—spectral skewness and spectral sparsity (Hoyer measure)—for both the original signal and all the       generated surrogates.
+* Statistical Testing: The metrics extracted from the surrogates create an empirical noise distribution. By comparing the original signal's metrics against    this distribution, we compute a p-value to determine if the recording contains true physiological activity or is simply background noise.
 
 The other one is based on the Dominant Frequency (DF) coherence between the different channels of a recording.
 
