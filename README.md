@@ -93,6 +93,8 @@ In addition to the gastric features, the **Single_channel_parameters** file also
 
 GSPT features two automated algorithms to assess EGG recording quality. 
 
+### Monte Carlo (MC) surrogate slection
+
 The first is a Monte Carlo test using surrogate data (IAAFWT). The underlying logic follows three steps:
 * Surrogate Generation: Starting from the original EGG time series, the algorithm generates artificial "surrogate" time series. These act as a custom noise    model (the null hypothesis, $H_0$) specifically tailored to your actual data.
 * Feature Extraction: We calculate two spectral metrics—spectral skewness and spectral sparsity (Hoyer measure)—for both the original signal and all the       generated surrogates.
@@ -101,6 +103,13 @@ The first is a Monte Carlo test using surrogate data (IAAFWT). The underlying lo
 The other one is based on the Dominant Frequency (DF) coherence between the different channels of a recording.
 
 * **is_noise**: the result of a quality check via Monte Carlo surrogates (IAAFWT). If is_noise is "yes," the EGG features for that channel are not statistically distinguishable from IAAFWT noise.
+
+### Dominant frequency (DF) standard deviation (SD) selection
+
+$$s=\Delta_{max} \frac{c_4(n)}{d_2(n)}$$
+
+
+
 * **CV_selection_low_0.5CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 0.5 cpm (0.0083 Hz).
 * **CV_selection_low_1CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 1 cmp (0.016 Hz).
 * **CV_selection_low_2CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 2 cmp (0.033 Hz).
