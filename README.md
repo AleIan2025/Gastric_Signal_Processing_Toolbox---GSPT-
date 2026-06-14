@@ -89,11 +89,11 @@ In addition to the gastric features, the **Single_channel_parameters** file also
 
 **Fraction_of_contaminated_signal** is the ratio between the duration of time intervals labeled as anomalies (and subsequently removed) and the total length of the signal. The other columns represent the results of two proposed channel selection GSPT offers.
 
-Analogaousely the **Instantaeous_curves** output file has these columns at the start of the dataset
+Analogously, the **Instantaneous_curves** output file summarizes the channel reliability status based on these selection criteria at the beginning of the dataset
 
 <img width="2667" height="378" alt="inst_quantities" src="https://github.com/user-attachments/assets/bd73aa78-81fc-45fa-a78c-f1290482fd96" />
 
-Finally, these informations are also present on the **Total_correlation_and_multivariate_entropies** where these quantities are computed one time for all the EGG channels and the also for the number of channels that surpass the various channel selction criteria
+Finally, this information is also present in the **Total_correlation_and_multivariate_entropies** file. In this dataset, the metrics are calculated both for the entire set of EGG channels and specifically for the number of channels that successfully meet the various channel selection criteria.
 
 <img width="1240" height="183" alt="tot_cor" src="https://github.com/user-attachments/assets/1cef75ad-81bb-4988-ae58-25097f11793a" />
 
