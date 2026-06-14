@@ -98,6 +98,10 @@ Finally, this information is also present in the **Total_correlation_and_multiva
 <img width="1240" height="183" alt="tot_cor" src="https://github.com/user-attachments/assets/1cef75ad-81bb-4988-ae58-25097f11793a" />
 
 
+All these columns serve as data selection tools. For example, if a channel has a *Fraction_of_contaminated_signal* of 0.9, it means that only 10% of the signal is free from anomalies, suggesting the data from this channel should likely be discarded.
+The CV-based selection is provided with three different thresholds; the choice of being more or less conservative is left to the user's discretion.
+
+
 
 ## Channel selection 
 
@@ -115,25 +119,24 @@ Generating surrogate data disrupts the original Power Spectral Density (PSD), sc
   <img width="4200" height="2400" alt="spec_skew" src="https://github.com/user-attachments/assets/9a8825b2-8416-4ca4-a69f-669a4168d434" />
 
 
-The other one is based on the Dominant Frequency (DF) coherence between the different channels of a recording.
+
 
 * **is_noise**: the result of a quality check via Monte Carlo surrogates (IAAFWT). If is_noise is "yes," the EGG features for that channel are not statistically distinguishable from IAAFWT noise.
 
 ### Dominant frequency (DF) standard deviation (SD) selection
 
+At rest, a healthy stomach exhibits coherent slow-wave propagation; consequently, the measured Dominant Frequency (DF) should remain independent of the recording electrode. We can leverage this characteristic to perform quality control on EGG recordings by evaluating DF variability, typically indexed by its Standard Deviation (SD). However, the SD of the DF is not an intuitive metric and lacks a direct physiological interpretation. Conversely, the maximum difference in DF across EGG channels—referred to as the DF range—provides a much more intuitive measure. Therefore, a recording can be classified as high-quality if its DF range falls below a predefined threshold. To this end, the GSPT implements three distinct thresholds: strict (0.5 cpm / 0.0083 Hz), medium (1.0 cpm / 0.016 Hz), and loose (2.0 cpm / 0.033 Hz). Hypothesizing that the underlying true DF of a recording is unique, and that cross-channel variations can be modeled as additive Gaussian noise, we can relate the DF range to the observed sample SD via the following formula:
+
 $$s=\Delta_{max} \frac{c_4(n)}{d_2(n)}$$
 
+Occasionally, one or more channels in a recording may suffer from specific issues (e.g., defective cables, poor skin contact) that artificially inflate the SD of the recording. To address this, the GSPT implements a recursive algorithm that systematically eliminates the channels contributing the most to the SD of the DF. This process continues until the SD falls below one of the three predefined thresholds, or until only 50% of the initial channels remain (ensuring a minimum of three channels are kept). Consequently, this channel selection algorithm can salvage viable recordings even when specific channels or groups of channels are compromised. The procedure is illustrated in the figure below.
 
+
+<img width="8400" height="6000" alt="GSPT_Categorization_Flow" src="https://github.com/user-attachments/assets/dcb2827d-ce5e-4f77-9490-01b8dc5fdce4" />
 
 * **CV_selection_low_0.5CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 0.5 cpm (0.0083 Hz).
 * **CV_selection_low_1CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 1 cmp (0.016 Hz).
 * **CV_selection_low_2CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 2 cmp (0.033 Hz).
-
-All these columns serve as data selection tools. For example, if a channel has a *Fraction_of_contaminated_signal* of 0.9, it means that only 10% of the signal is free from anomalies, suggesting the data from this channel should likely be discarded.
-The CV-based selection is provided with three different thresholds; the choice of being more or less conservative is left to the user's discretion.
-
-<img width="8400" height="6000" alt="GSPT_Categorization_Flow" src="https://github.com/user-attachments/assets/dcb2827d-ce5e-4f77-9490-01b8dc5fdce4" />
-
 
 
 ## An overview on the gastric features
