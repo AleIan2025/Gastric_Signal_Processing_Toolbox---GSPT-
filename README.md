@@ -117,7 +117,7 @@ Finally, this information is also present in the **Total_correlation_and_multiva
 
 
 All these columns serve as data selection tools. For example, if a channel has a *Fraction_of_contaminated_signal* of 0.9, it means that only 10% of the signal is free from anomalies, suggesting the data from this channel should likely be discarded.
-The CV-based selection is provided with three different thresholds; the choice of being more or less conservative is left to the user's discretion.
+The SD-based selection is provided with three different thresholds; the choice of being more or less conservative is left to the user's discretion.
 
 
 
