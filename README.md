@@ -83,7 +83,8 @@ If the Set Custom Thresholds option is selected, the three DF range thresholds c
 
 <img width="621" height="486" alt="custom_SD" src="https://github.com/user-attachments/assets/cea1cc71-a94f-43dd-a9f4-1da3d04df866" />
 
-The default thresholds were tested on 15-minute resting-state EGG data from 60 healthy participants. Given that healthy subjects are expected to exhibit a clear dominant frequency in the normogastric band under these conditions, an effective channel selection method should increase the proportion of normogastric recordings while reducing tachygastric and bradygastric dominant frequencies. As illustrated in the figure below, the default thresholds successfully achieve this. The resulting frequency proportions, along with the fraction of retained signals, show a good performance of these default thresholds on this dataset.
+
+The **default thresholds** were tested on 15-minute resting-state EGG data from 60 healthy participants. Given that healthy subjects are expected to exhibit a clear dominant frequency in the normogastric band under these conditions, an effective channel selection method should increase the proportion of normogastric recordings while reducing tachygastric and bradygastric dominant frequencies. As illustrated in the figure below, the default thresholds successfully achieve this. The resulting frequency proportions, along with the fraction of retained signals, show a good performance of these **default thresholds** on this dataset.
 
 <img width="3300" height="2250" alt="SD_thresholds_Final_Elegance" src="https://github.com/user-attachments/assets/ccda4c34-8c28-424e-bc4c-604d9d56adca" />
 
