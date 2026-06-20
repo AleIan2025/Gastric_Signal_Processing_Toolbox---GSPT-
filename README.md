@@ -154,9 +154,6 @@ Occasionally, one or more channels in a recording may suffer from specific issue
 
 <img width="8400" height="6000" alt="GSPT_Categorization_Flow" src="https://github.com/user-attachments/assets/dcb2827d-ce5e-4f77-9490-01b8dc5fdce4" />
 
-* **CV_selection_low_0.5CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 0.5 cpm (0.0083 Hz).
-* **CV_selection_low_1CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 1 cmp (0.016 Hz).
-* **CV_selection_low_2CPM**: a selection criterion based on Dominant Frequency (DF) coherence across different EGG channels. For this threshold, the maximum DF difference allowed between channels is 2 cmp (0.033 Hz).
 
 
 ## An overview on the gastric features
