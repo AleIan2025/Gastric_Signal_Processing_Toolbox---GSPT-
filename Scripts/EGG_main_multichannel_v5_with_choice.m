@@ -178,7 +178,7 @@ addpath("C:\Users\aless\Documents\fieldtrip-20251023\fieldtrip-20251023")
 ft_defaults;
 % ⚠️ Update the path below to match your local data path
 cfg = [];
-cfg.dataset='C:\Users\aless\Downloads\Example_Clean.eeg';
+cfg.dataset='C:\Users\aless\Documents\Paper_EGG_drafts\dati_per_github\Example_Clean.eeg';
 
 % ⚠️ Channel selection can be done in several ways.
 % By default, all available channels are selected.
