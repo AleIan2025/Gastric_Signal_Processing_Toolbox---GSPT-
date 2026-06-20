@@ -73,6 +73,13 @@ If the **Conditional** option is selected, GSPT will run the artifact localizati
 
 If the **Forced** option is selected, artifact localization and removal are performed by default. This latter mode protects against an excessive number of false positives at the expense of losing some true positives. Conversely, the Conditional option is more aggressive, leading to a higher number of true positives at the cost of more false positives. The choice between the two is left to the user's specific needs.
 
+After this selection process, GSPT provides an additional option, as illustrated in the figure below.
+
+<img width="982" height="663" alt="SD_selection_choice" src="https://github.com/user-attachments/assets/ff0d5fca-ab87-44a0-8203-381928b3492c" />
+
+These parameters only affect the level of strictness of one of the quality evaluation methods implemented in GSPT (see the **Dominant frequency (DF) standard deviation (SD) selection** section below for more details); they do not alter the values of the extracted gastric features.
+
+
 
 ## Output files
 
