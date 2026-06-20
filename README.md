@@ -101,18 +101,19 @@ Once GSPT has finished, it will save three different files in your selected Outp
 
 In addition to the gastric features, the **Single_channel_parameters** file also contains several other important columns:
 
-
-<img width="601" height="76" alt="nuovo_single_channel_excel" src="https://github.com/user-attachments/assets/6d94164a-1274-48b9-bbcc-7f72193a0ba9" />
+<img width="1246" height="153" alt="single_ch_clean" src="https://github.com/user-attachments/assets/e51c14dc-20fa-4762-9f91-1c771b94463c" />
 
 **Fraction_of_contaminated_signal** is the ratio between the duration of time intervals labeled as anomalies (and subsequently removed) and the total length of the signal. The other columns represent the results of two proposed channel selection GSPT offers.
 
 Analogously, the **Instantaneous_curves** output file summarizes the channel reliability status based on these selection criteria at the beginning of the dataset
 
-<img width="2667" height="378" alt="inst_quantities" src="https://github.com/user-attachments/assets/bd73aa78-81fc-45fa-a78c-f1290482fd96" />
+<img width="2169" height="496" alt="inst_curv_clean" src="https://github.com/user-attachments/assets/1d52c3b2-1fe6-4af8-8378-7b7acaf5ea2e" />
+
 
 Finally, this information is also present in the **Total_correlation_and_multivariate_entropies** file. In this dataset, the metrics are calculated both for the entire set of EGG channels and specifically for the number of channels that successfully meet the various channel selection criteria.
 
-<img width="1240" height="183" alt="tot_cor" src="https://github.com/user-attachments/assets/1cef75ad-81bb-4988-ae58-25097f11793a" />
+
+<img width="1243" height="186" alt="tot_cor_clean" src="https://github.com/user-attachments/assets/57e36143-ed4e-4317-967e-be50702e1610" />
 
 
 All these columns serve as data selection tools. For example, if a channel has a *Fraction_of_contaminated_signal* of 0.9, it means that only 10% of the signal is free from anomalies, suggesting the data from this channel should likely be discarded.
