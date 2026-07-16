@@ -88,10 +88,10 @@ function [parameters, efreq, eamp, ephi, tp, ief, amp_curve, ph_curve, if_curve,
     [efreq, eamp, ephi, ~, amp_curve, ph_curve, if_curve] = ...
     wavelet_inst_extr_v5(x, t, [], 'on', fs, opts);
     if is_globally_significant
-          sgtitle(sprintf('Fundamental normogastric component - Channel %d', channel_id));
+          sgtitle(sprintf('Fundamental gastric component - Channel %d', channel_id));
     else
         % Create the sgtitle and store the handle
-        sgtitle(sprintf('Fundamental normogastric component - Channel %d (Low reliability)', channel_id));
+        sgtitle(sprintf('Fundamental gastric component - Channel %d (Low reliability)', channel_id));
         % Add warning text in the figure
         annotation('textbox', [0.15 0.89 0.7 0.05], ...
         'String', '⚠ Estimated curves may be unreliable due to high noise or weak normogastric spectral evidence', ...
@@ -156,10 +156,10 @@ function [parameters, efreq, eamp, ephi, r1, tp, ief, amp_curve, ph_curve, if_cu
         [efreq, eamp, ephi, ~, amp_curve, ph_curve, if_curve] = ...
         wavelet_inst_extr_v5(filled_signal, t, anomaly_intervals, 'on', fs, opts);
         if is_globally_significant
-            sgtitle(sprintf('Fundamental normogastric component - Channel %d', channel_id));
+            sgtitle(sprintf('Fundamental gastric component - Channel %d', channel_id));
         else
             % Create the sgtitle and store the handle
-            sgtitle(sprintf('Fundamental normogastric component - Channel %d (Low reliability)', channel_id));
+            sgtitle(sprintf('Fundamental gastric component - Channel %d (Low reliability)', channel_id));
             % Add warning text in the figure
             annotation('textbox', [0.15 0.89 0.7 0.05], ...
             'String', '⚠ Estimated curves may be unreliable due to high noise or weak normogastric spectral evidence', ...

@@ -1,9 +1,8 @@
 function [parameters_results] = MC_test_IAAWFT_v9(signal, t, fs, nSurrogates, anomalies, channel_id)
-% MC_TEST_WIAAFT_V10 Statistical validation of EGG signals using WIAAFT surrogates.
 %
 % This function assesses signal quality by comparing three key spectral metrics
-% of the original signal against a distribution of Wavelet ased Iterative Amplitude Adjusted 
-% Fourier Transform (IAAWFT) surrogates.
+% of the original signal against a distribution of Wavelet based Iterative Amplitude Adjusted 
+% Fourier Transform (IAAFWT) surrogates.
 %
 % METRICS COMPUTED:
 %   1. Spectral Skewness: Measures the asymmetry of the power spectrum.
@@ -34,48 +33,25 @@ function [parameters_results] = MC_test_IAAWFT_v9(signal, t, fs, nSurrogates, an
     end
     
     %% --- Step 2: Band-pass Filtering (0.016 - 0.16 Hz) ---
-    
+    if exist('cheb_EGG_filt', 'file')
         signal_filt = cheb_EGG_filt(signal_10Hz, fs_10Hz);
-
-            % Transient removal (border effect mitigation)
-    border = 20;
-    if length(signal_filt) > 2*border
-        % Trim the signal and the time vector
-        signal_filt = signal_filt(border+1:end-border);
-        t_10Hz = t_10Hz(border+1:end-border);
-        
-        % Safe handling and update of the anomalies vector
-        if ~isempty(anomalies)
-            % Shift all indices to account for the removed left border
-            anomalies = anomalies - border;
-            
-            if mod(length(anomalies), 2) == 0
-                % Process anomalies as pairs: [start1, end1, start2, end2, ...]
-                valid_anomalies = [];
-                for k = 1:2:length(anomalies)-1
-                    s_idx = anomalies(k);
-                    e_idx = anomalies(k+1);
-                    
-                    % Discard the anomaly if it falls entirely within the removed borders
-                    if e_idx < 1 || s_idx > length(signal_filt)
-                        continue; 
-                    end
-                    
-                    % Constrain start and end indices to the new signal boundaries
-                    s_adj = max(1, s_idx);
-                    e_adj = min(length(signal_filt), e_idx);
-                    
-                    % Append the adjusted valid pair
-                    valid_anomalies = [valid_anomalies, s_adj, e_adj];
-                end
-                % Overwrite the anomalies vector for downstream use
-                anomalies = valid_anomalies;
-            else
-                % Fallback for single-index arrays
-                anomalies = anomalies(anomalies > 0 & anomalies <= length(signal_filt));
-            end
-        end
+    else
+        % Fallback to standard IIR if custom filter is missing
+        bp = designfilt('bandpassiir','FilterOrder',4, ...
+            'HalfPowerFrequency1',0.016,'HalfPowerFrequency2',0.16, 'SampleRate',fs_10Hz);
+        signal_filt = filtfilt(bp, signal_10Hz);
     end
+    
+    % Transient removal (border effect mitigation)
+    %border = 20;
+    %if length(signal_filt) > 2*border
+    %    signal_filt = signal_filt(border+1:end-border);
+    %    t_10Hz = t_10Hz(border+1:end-border);
+    %    if ~isempty(anomalies)
+    %        anomalies = anomalies - border;
+    %        anomalies = anomalies(anomalies > 0 & anomalies <= length(signal_filt));
+    %    end
+    %end
     
     %% --- Step 3: Artifact Masking & Reconstruction ---
     mask_10Hz = false(size(signal_filt));
@@ -117,10 +93,10 @@ function [parameters_results] = MC_test_IAAWFT_v9(signal, t, fs, nSurrogates, an
     %% --- Step 5: Original Signal Metrics ---
     metrics_orig = compute_egg_metrics(signal_final, fs_final, mask_final);
     
-    %% --- Step 6: Surrogate Generation (WIAAFT) ---
-    if ~exist('iaaws_dualtree_v2', 'file')
-        error('iaaws_dualtree_v2.m not found in path.');
-    end
+    %% --- Step 6: Surrogate Generation (IAAFWT) ---
+    %if ~exist('iaaws_dualtree_R_replica', 'file')
+    %    error('iaaws_dualtree_R_replica.m not found in path.');
+    %end
     %[surrogates_t, ~] = iaaws_dualtree_R_replica(signal_final, nSurrogates, 1000);
     tic
     [surrogates_t, ~] = iaaws_dualtree_v2(signal_final, nSurrogates, 1000, channel_id);
@@ -216,11 +192,8 @@ function plot_quality_metrics(res, surr_data)
     % Create figure with a white background
     fig = figure('Color', 'w', 'Name', 'IAAWFT Validation Results', 'Position', [100 100 1200 450]);
     
-    % Define the golden-yellow color
+    % Define the golden-yellow color from previous version
     gold_color = [0.8 0.6 0];
-    
-    % Initialize modern tiled layout (robust against resizing and legend placement)
-    tlo = tiledlayout(1, n_metrics, 'TileSpacing', 'compact', 'Padding', 'compact');
     
     for i = 1:n_metrics
         fn = fields{i};
@@ -228,8 +201,8 @@ function plot_quality_metrics(res, surr_data)
         obs = res.(fn).original_value;
         pval = res.(fn).p_value_right; % Metrics where Higher is Better
         
-        % Advance to the next tile instead of using subplot
-        ax(i) = nexttile(tlo);
+        % Subplot layout
+        ax(i) = subplot(1, n_metrics, i);
         
         % Histogram of surrogate distribution
         h_surr = histogram(dist, 25, 'FaceColor', gold_color, 'EdgeColor', 'none', 'FaceAlpha', 0.6);
@@ -238,11 +211,11 @@ function plot_quality_metrics(res, surr_data)
         % Vertical line for original signal
         h_obs = xline(obs, 'r', 'LineWidth', 2.5);
         
-        % Title and Labels formatting
+        % Title and Labels
         clean_title = upper(strrep(fn, '_', ' '));
         title_color = 'k'; 
         if pval < 0.05
-            title_color = [0 0.5 0]; % Dark green for significance
+            title_color = [0 0.5 0]; % Dark green for significant
             status_str = '*';
         else
             status_str = 'ns';
@@ -252,25 +225,24 @@ function plot_quality_metrics(res, surr_data)
               'Color', title_color, 'FontWeight', 'bold', 'FontSize', 11);
         
         xlabel('Metric Value');
-        if i == 1
-            ylabel('Count'); 
-        end 
+        if i == 1, ylabel('Count'); end % Only label Y axis on the first plot
         
         grid on; 
         set(gca, 'GridAlpha', 0.2);
         
-        % Dynamic X-axis margins to ensure visibility of the empirical observation
+        % Dynamic X-axis margins to ensure visibility of the red line
         all_vals = [dist(:); obs];
         range_vals = max(all_vals) - min(all_vals);
         xlim([min(all_vals) - 0.1*range_vals, max(all_vals) + 0.1*range_vals]);
     end
     
-    % --- Fixed Global Legend via TiledLayout ---
-    % Create a single legend attached to the layout, not to a specific axis
-    lgd = legend(ax(n_metrics), [h_surr, h_obs], {'WIAAFT Surrogates', 'Original Signal'}, ...
+    % --- Fixed Global Legend ---
+    % Create a single legend for the entire figure, placed at the bottom
+    lgd = legend([h_surr, h_obs], {'IAAFWT Surrogates', 'Original Signal'}, ...
         'Orientation', 'horizontal', ...
+        'Location', 'southoutside', ...
         'FontSize', 10);
     
-    % Assign the legend to the shared south tile of the entire layout
-    lgd.Layout.Tile = 'south'; 
+    % Adjust position slightly to ensure it doesn't overlap with x-labels
+    lgd.Position(2) = 0.02; 
 end

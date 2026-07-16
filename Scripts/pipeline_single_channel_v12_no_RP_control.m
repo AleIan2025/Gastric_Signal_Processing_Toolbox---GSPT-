@@ -70,12 +70,15 @@ function [parameters, efreq, eamp, ephi, r1, tp, ief, amp_curve, ph_curve, if_cu
         end
         
         %% Instanteous normogastric quantities
-        [efreq, eamp, ephi, ~, amp_curve, ph_curve, if_curve] = wavelet_inst_extr_v4(filled_signal, t, anomaly_intervals, 'on', fs);
+        f_dom = get_scalar(parameters.Dominant_frequency);   
+        opts  = struct('method','adaptive', 'f_dom', f_dom); 
+        [efreq, eamp, ephi, ~, amp_curve, ph_curve, if_curve] = ...
+         wavelet_inst_extr_v5(x, t, [], 'on', fs, opts);
         if is_globally_significant
-            sgtitle(sprintf('Fundamental normogastric component - Channel %d', channel_id));
+            sgtitle(sprintf('Fundamental gastric component - Channel %d', channel_id));
         else
             % Create the sgtitle and store the handle
-            sgtitle(sprintf('Fundamental normogastric component - Channel %d (Low reliability)', channel_id));
+            sgtitle(sprintf('Fundamental gastric component - Channel %d (Low reliability)', channel_id));
             % Add warning text in the figure
             annotation('textbox', [0.15 0.89 0.7 0.05], ...
             'String', '⚠ Estimated curves may be unreliable due to high noise or weak normogastric spectral evidence', ...
@@ -286,4 +289,24 @@ function [is_globally_significant, p_simes] = calculate_simes_test(p_values, alp
     
     % Ensure the p-value is bounded between 0 and 1
     p_simes = min(1, max(0, p_simes));
+end
+
+
+function v = get_scalar(S) %#ok<DEFNU>
+% Convenience: pull a scalar dominant frequency out of a struct field such
+% as parameters.Dominant_frequency (which may itself be a struct). Tries a
+% few common subfield names, else the first numeric scalar found.
+if isnumeric(S) && isscalar(S), v = S; return; end
+if isstruct(S)
+    for name = {'value','val','freq','f','dominant','Hz'}
+        if isfield(S, name{1}) && isscalar(S.(name{1})) && isnumeric(S.(name{1}))
+            v = S.(name{1}); return;
+        end
+    end
+    fn = fieldnames(S);
+    for k = 1:numel(fn)
+        if isnumeric(S.(fn{k})) && isscalar(S.(fn{k})), v = S.(fn{k}); return; end
+    end
+end
+error('get_scalar:type', 'Could not extract a scalar dominant frequency; pass opts.f_dom explicitly.');
 end
