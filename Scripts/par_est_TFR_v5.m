@@ -119,7 +119,7 @@ function [parameters, tp, ist_ef1, if_curve_ridge] = par_est_TFR_v5(x, t, plots,
     %% === Phase space and nonlinear dynamics on continuous signal ===
     [~, eLag, eDIm] = phaseSpaceReconstruction(filt_sig, 'MaxDim', 9, 'MaxLag', 100);
     SEn_sig   = SampEn(filt_sig, 'm', eDIm, 'tau', eLag);  SEn_sig = SEn_sig(end);
-    De_sig    = DispEn(filt_sig, 'm', eDIm, 'tau', eLag);
+    De_sig    = DispEn(filt_sig, 'm', eDIm, 'tau', eLag, 'Norm', true);
 
     corrDim = correlationDimension(filt_sig, eLag, eDIm, 'NumPoints', 100);
     LLE     = lyapunovExponent(filt_sig, fs, eLag, eDIm);
@@ -133,7 +133,7 @@ function [parameters, tp, ist_ef1, if_curve_ridge] = par_est_TFR_v5(x, t, plots,
     time_pow_cont_norm = time_pow_cont / sum(time_pow_cont);
     [~, eLagTP, eDImTP] = phaseSpaceReconstruction(time_pow_cont_norm, 'MaxDim', 9, 'MaxLag', 100);
     SEn_TP = SampEn(time_pow_cont_norm, 'm', eDImTP, 'tau', eLagTP);  SEn_TP = SEn_TP(end);
-    De_TP  = DispEn(time_pow_cont_norm, 'm', eDImTP, 'tau', eLagTP);
+    De_TP  = DispEn(time_pow_cont_norm, 'm', eDImTP, 'tau', eLagTP, 'Norm', true);
 
     %% === Renyi, Hoyer and Gradient entropies from valid TFR ===
     valid_TFR = faslt(:, column_mask);
@@ -141,10 +141,10 @@ function [parameters, tp, ist_ef1, if_curve_ridge] = par_est_TFR_v5(x, t, plots,
     R = renyi(abs(valid_TFR).^2, t_valid, freq_faslt, 3) / log2(numel(valid_TFR));
     [~, ~, M_H, ~] = tfr_measures(valid_TFR);
 
-    Gradient_entropy = GradEn(abs(valid_TFR).^2);
+    Gradient_entropy = GradEn_v2(abs(valid_TFR).^2);
 
     valid_TFR_dom_band = valid_TFR(dom_band_l:dom_band_h, :);
-    G_dom = GradEn(abs(valid_TFR_dom_band).^2);
+    G_dom = GradEn_v2(abs(valid_TFR_dom_band).^2);
     GradEn_relative = G_dom / (Gradient_entropy);
 
     %% === Store all results into a struct ===
