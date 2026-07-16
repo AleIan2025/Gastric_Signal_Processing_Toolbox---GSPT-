@@ -43,7 +43,7 @@ opts = set_default(opts, 'f0_wft',       50);
 opts = set_default(opts, 'f0_wt',        opts.f0_wft/20);
 switch lower(opts.method)
     case 'wideband', opts = set_default(opts, 'penal', [2 2]);
-    otherwise,       opts = set_default(opts, 'penal', [2 2]);
+    otherwise,       opts = set_default(opts, 'penal', [1 1]);
 end
 
 % -------------------- decide the extraction band -------------------------
