@@ -209,16 +209,10 @@ Figure F3. Time-frequency representation (TFR) of an EGG signal obtained via the
 
 ### Instantaneous quantities
 
-Instantaneous quantities are becoming increasingly important in neuroscience after the discovery of a gastric network coupling stomach activity with brain dynamics. Here, we extract these instantaneous curves of the fundamental gastric component via ridge points, outperforming current Hilbert transform-based approaches. An example of the extracted curves from an EGG signal is shown in Figure F4.
+Instantaneous quantities are becoming increasingly important in neuroscience after the discovery of a gastric network coupling stomach activity with brain dynamics. Here, we extract these instantaneous curves of the fundamental gastric component via ridge points. An example of the extracted curves from an EGG signal is shown in Figure F4.
 
 <img width="2240" height="1219" alt="Sub_07_v2_pre_baseline_inst_curves" src="https://github.com/user-attachments/assets/ec84875a-c331-49dc-9f96-02520d6e9870" />
 Figure F4. Reconstructed fundamental gastric component from a real EGG recorded signal together with its 3 instantaneous quantities: instantaneous amplitude, phase and frequency.
-
-Analysis of the estimation errors for instantaneous phase, frequency, and amplitude in test signals across various signal-to-noise ratios (SNRs) demonstrates that the ridge method significantly outperforms the conventional approach involving the analytic signal (Figure F5).
-
-<img width="1638" height="1364" alt="Phase_Log" src="https://github.com/user-attachments/assets/0a5563e1-172f-482a-95e3-0cdc90fbd64f" />
-Figure F5. Instantaneous phase estimation errors across various SNRs. Each data point is computed from 1,000 independent noise realizations. Markers denote the mean values, and error bars represent the standard deviations.
-
 
 
 ### Total correlations & Multivariate Entropies
