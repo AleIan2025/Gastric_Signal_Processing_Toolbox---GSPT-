@@ -20,7 +20,7 @@ By being completely automated and data-driven, **GSPT** aims to be a cornerstone
 
 ## GSPT flowchart
 
-<img width="7297" height="9743" alt="GSPT_flowchart_06_07_26" src="https://github.com/user-attachments/assets/2150a95a-2959-47bf-8398-0f51b943952b" />
+<img width="7692" height="11793" alt="GSPT_flowchart_v2" src="https://github.com/user-attachments/assets/43587d35-0ea5-44a0-83f8-59481a4cc440" />
 
 
 
