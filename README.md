@@ -116,7 +116,7 @@ Analogously, the **Instantaneous_curves** output file summarizes the channel rel
 Finally, this information is also present in the **Total_correlation_and_multivariate_entropies** file. In this dataset, the metrics are calculated both for the entire set of EGG channels and specifically for the number of channels that successfully meet the various channel selection criteria.
 
 
-<img width="1243" height="186" alt="tot_cor_clean" src="https://github.com/user-attachments/assets/57e36143-ed4e-4317-967e-be50702e1610" />
+<img width="1237" height="183" alt="TC_normalized" src="https://github.com/user-attachments/assets/2f927756-4fb4-4395-8c4c-e1cfce551ed6" />
 
 
 All these columns serve as data selection tools. For example, if a channel has a *Fraction_of_contaminated_signal* of 0.9, it means that only 10% of the signal is free from anomalies, suggesting the data from this channel should likely be discarded.
