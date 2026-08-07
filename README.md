@@ -20,8 +20,7 @@ By being completely automated and data-driven, **GSPT** aims to be a cornerstone
 
 ## GSPT flowchart
 
-<img width="7692" height="11793" alt="GSPT_flowchart_v2" src="https://github.com/user-attachments/assets/43587d35-0ea5-44a0-83f8-59481a4cc440" />
-
+<img width="7692" height="11793" alt="Figure_1_jpg" src="https://github.com/user-attachments/assets/5994f39d-47df-4988-aca0-a3ecc904f5ed" />
 
 
 ## Prerequisites
@@ -88,7 +87,7 @@ If the Set Custom Thresholds option is selected, the three DF range thresholds c
 The **default thresholds** were tested on 15-minute resting-state EGG data from 60 healthy participants. Given that healthy subjects are expected to exhibit a clear dominant frequency in the normogastric band under these conditions, an effective channel selection method should increase the proportion of normogastric recordings while reducing tachygastric and bradygastric dominant frequencies. As illustrated in the figure below, the default thresholds successfully achieve this. The resulting frequency proportions, along with the fraction of retained signals, show a good performance of these **default thresholds** on this dataset.
 
 
-<img width="6000" height="3600" alt="SD_selection_perc_bande" src="https://github.com/user-attachments/assets/07d4c0c0-9cf6-4e37-8e03-fb6b79462a84" />
+<img width="5400" height="3600" alt="Figure_7_jpg" src="https://github.com/user-attachments/assets/58343869-45c1-4a8d-b23e-0bd8f451ea3d" />
 <img width="6600" height="3900" alt="SD_selection_retentions_bande" src="https://github.com/user-attachments/assets/2e0bf7e8-fac6-4db3-a4ac-71396361b071" />
 
 
