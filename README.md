@@ -77,7 +77,7 @@ After this selection process, GSPT provides an additional option, as illustrated
 
 <img width="982" height="663" alt="SD_selection_choice" src="https://github.com/user-attachments/assets/ff0d5fca-ab87-44a0-8203-381928b3492c" />
 
-These parameters only affect the level of strictness of one of the quality evaluation methods implemented in GSPT (see the **Dominant frequency (DF) standard deviation (SD) selection** section below for more details); they do not alter the values of the extracted gastric features.
+These parameters only affect the level of strictness of one of the quality evaluation methods implemented in GSPT (see the **Dominant frequency (DF) consistency selection** section below for more details); they do not alter the values of the extracted gastric features.
 
 If the Set Custom Thresholds option is selected, the three DF range thresholds can be freely adjusted, as shown in the following figure.
 
@@ -143,7 +143,7 @@ Generating surrogate data disrupts the original Power Spectral Density (PSD), sc
 
 * **is_noise**: the result of a quality check via Monte Carlo surrogates (IAAFWT). If is_noise is "yes," the EGG features for that channel are not statistically distinguishable from IAAFWT noise.
 
-### Dominant frequency (DF) standard deviation (SD) selection
+### Dominant frequency (DF) consistency selection
 
 At rest, a healthy stomach exhibits coherent slow-wave propagation; consequently, the measured Dominant Frequency (DF) should remain independent of the recording electrode. We can leverage this characteristic to perform quality control on EGG recordings by evaluating DF variability, typically indexed by its Standard Deviation (SD). However, the SD of the DF is not an intuitive metric and lacks a direct physiological interpretation. Conversely, the maximum difference in DF across EGG channels—referred to as the DF range—provides a much more intuitive measure. Therefore, a recording can be classified as high-quality if its DF range falls below a predefined threshold. To this end, the GSPT implements three distinct thresholds: strict (0.005 Hz), medium (0.01 Hz), and loose (0.02 Hz). Hypothesizing that the underlying true DF of a recording is unique, and that cross-channel variations can be modeled as additive Gaussian noise, we can relate the DF range $\Delta_{max}$ to the observed sample SD $s$ via the following formula:
 
@@ -160,7 +160,7 @@ Occasionally, one or more channels in a recording may suffer from specific issue
 
 ## An overview on the gastric features
 
-**GSPT** calculates a total of 32 single channel features, 3 single channel instantaneous curves (amplitude, phase and frequency) and 6 multichannel metrics. 
+**GSPT** calculates a total of 32 single channel features, 3 single channel instantaneous curves (amplitude, phase and frequency) and 9 multichannel metrics. 
 
 ### Single channel features
 The 32 single channel features can be organized as follows:
