@@ -141,9 +141,9 @@ Generating surrogate data disrupts the original Power Spectral Density (PSD), sc
 
 ### Dominant frequency (DF) consistency selection
 
-At rest, a healthy stomach exhibits coherent slow-wave propagation; consequently, the measured Dominant Frequency (DF) should remain independent of the recording electrode. We can leverage this characteristic to perform quality control on EGG recordings by evaluating DF variability, typically indexed by its Standard Deviation (SD). However, the SD of the DF is not an intuitive metric and lacks a direct physiological interpretation. Conversely, the maximum difference in DF across EGG channels—referred to as the DF range—provides a much more intuitive measure. Therefore, a recording can be classified as high-quality if its DF range falls below a predefined threshold. To this end, the GSPT implements three distinct thresholds: strict (0.005 Hz), medium (0.01 Hz), and loose (0.02 Hz). Hypothesizing that the underlying true DF of a recording is unique, and that cross-channel variations can be modeled as additive Gaussian noise, we can relate the DF range $\Delta_{max}$ to the observed sample SD $s$ via the following formula:
+At rest, healthy gastric slow waves propagate coherently across the stomach, meaning the Dominant Frequency (DF) should remain spatially consistent across all recording channels. GSPT leverages this property to perform automated quality control by evaluating the maximum DF range (the difference between the highest and lowest channel DFs). Because there is no theoretical first principle to establish a single universal cutoff, GSPT implements three candidate preset thresholds: strict (0.005 Hz), medium (0.010 Hz), and loose (0.020 Hz), which can also be customized by the user. Recordings with an inter-channel DF range below the selected threshold are retained as reliable, while those exceeding it are flagged as corrupted. Assuming the measured DFs reflect a single underlying biological oscillator perturbed by additive Gaussian noise, this range threshold maps to the channel-wise sample standard deviation s via the following relationship:
 
-$$s=\Delta_{max} \frac{c_4(n)}{d_2(n)},$$
+$$\Delta_{max}= s \frac{d_2(n))}{c_4(n},$$
 
 where n is the number of channels in the recroding and $c_4$ and $d_2$ are costants (Shewhart and Tippett). 
 
