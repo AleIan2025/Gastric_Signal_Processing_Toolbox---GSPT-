@@ -105,7 +105,7 @@ In addition to the gastric features, the **Single_channel_parameters** file also
 
 <img width="1246" height="153" alt="single_ch_clean" src="https://github.com/user-attachments/assets/e51c14dc-20fa-4762-9f91-1c771b94463c" />
 
-**Fraction_of_contaminated_signal** is the ratio between the duration of time intervals labeled as anomalies (and subsequently removed) and the total length of the signal. The other columns represent the results of two proposed channel selection GSPT offers.
+**Fraction_of_contaminated_signal** is the ratio between the duration of time intervals labeled as anomalies (and subsequently removed) and the total length of the signal. The other columns represent the results of two proposed channel selection GSPT offers: is_noise is obtained by Monte Carlo surrogate based selection and the other three by the DF consistency method (see next section, **Channel and recording selection** for more details on these methods).
 
 Analogously, the **Instantaneous_curves** output file summarizes the channel reliability status based on these selection criteria at the beginning of the dataset
 
@@ -119,11 +119,11 @@ Finally, this information is also present in the **Total_correlation_and_multiva
 
 
 All these columns serve as data selection tools. For example, if a channel has a *Fraction_of_contaminated_signal* of 0.9, it means that only 10% of the signal is free from anomalies, suggesting the data from this channel should likely be discarded.
-The SD-based selection is provided with three different thresholds; the choice of being more or less conservative is left to the user's discretion.
+The DF consistency based selection is provided with three different thresholds; the choice of being more or less conservative is left to the user's discretion.
 
 
 
-## Channel selection 
+## Channel and recording selection 
 
 GSPT features two automated algorithms to assess EGG recording quality. 
 
@@ -138,10 +138,6 @@ Generating surrogate data disrupts the original Power Spectral Density (PSD), sc
 
   <img width="4200" height="2400" alt="spec_skew" src="https://github.com/user-attachments/assets/9a8825b2-8416-4ca4-a69f-669a4168d434" />
 
-
-
-
-* **is_noise**: the result of a quality check via Monte Carlo surrogates (IAAFWT). If is_noise is "yes," the EGG features for that channel are not statistically distinguishable from IAAFWT noise.
 
 ### Dominant frequency (DF) consistency selection
 
