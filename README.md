@@ -71,7 +71,7 @@ If the **Conditional** option is selected, GSPT will run the artifact localizati
 
 <img width="415" height="371" alt="MC_test_spike_anomalies_found" src="https://github.com/user-attachments/assets/9397b1a7-fca8-4a0d-8be8-ba60fb175e5e" /> <img width="415" height="371" alt="MC_spike_test" src="https://github.com/user-attachments/assets/13416fee-0a26-4fef-a86e-618dae117dff" />
 
-If the **Forced** option is selected, artifact localization and removal are performed by default. This latter mode protects against an excessive number of false positives at the expense of losing some true positives. Conversely, the Conditional option is more aggressive, leading to a higher number of true positives at the cost of more false positives. The choice between the two is left to the user's specific needs.
+If the **Forced** option is selected, artifact localization and removal are performed by default. The **Conservative** mode protects against an excessive number of false positives at the expense of losing some true positives. Conversely, the **Forced** option is more aggressive, leading to a higher number of true positives at the cost of more false positives. The choice between the two is left to the user's specific needs.
 
 After this selection process, GSPT provides an additional option, as illustrated in the figure below.
 
