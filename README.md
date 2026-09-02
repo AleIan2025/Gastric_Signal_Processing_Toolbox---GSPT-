@@ -238,7 +238,7 @@ In terms of the Venn diagrams in Figure F5, multivariate entropy corresponds to 
 
 If you use GSPT in your research, please cite it as follows:
 
-> Iannone A., Panasiti M.S., Aglioti S.M., Della Penna S. (2026). GSPT: a full automated pipeline for channel-wise multi-electrod electrogastrography data analysis [Software]. Available from [https://github.com/AleIan2025/Gastric-Signal-Processing-Toolbox-GSPT-](https://github.com/AleIan2025/Gastric-Signal-Processing-Toolbox-GSPT-)
+> Iannone A., Panasiti M.S., Aglioti S.M., Della Penna S. (2026). Optimizing Non-Invasive Assessment of Gastric Activity: A Fully Automated Channel-Wise Pipeline for Multi-Electrode Electrogastrography [Software]. Available from [https://github.com/AleIan2025/Gastric-Signal-Processing-Toolbox-GSPT-](https://github.com/AleIan2025/Gastric-Signal-Processing-Toolbox-GSPT-)
 
 BibTeX entry:
 
