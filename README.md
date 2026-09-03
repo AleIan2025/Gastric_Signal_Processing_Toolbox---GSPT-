@@ -238,7 +238,7 @@ In terms of the Venn diagrams in Figure F5, multivariate entropy corresponds to 
 
 If you use GSPT in your research, please cite the accompanying preprint:
 
-> Iannone, A., Panasiti, M. S., Aglioti, S. M., & Della Penna, S. (2026, September 3). *Optimizing non-invasive assessment of gastric activity: a fully automated channel-wise pipeline for multi-electrode electrogastrography*. https://doi.org/10.17605/OSF.IO/ENZV5
+> Iannone, A., Panasiti, M. S., Aglioti, S. M., & Della Penna, S. (2026). *Optimizing non-invasive assessment of gastric activity: a fully automated channel-wise pipeline for multi-electrode electrogastrography*. https://doi.org/10.17605/OSF.IO/ENZV5
 
 BibTeX:
 
