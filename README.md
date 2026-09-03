@@ -236,20 +236,23 @@ In terms of the Venn diagrams in Figure F5, multivariate entropy corresponds to 
 
 ## Citation
 
-If you use GSPT in your research, please cite it as follows:
+If you use GSPT in your research, please cite the accompanying preprint:
 
-> Iannone A., Panasiti M.S., Aglioti S.M., Della Penna S. (2026). Optimizing Non-Invasive Assessment of Gastric Activity: A Fully Automated Channel-Wise Pipeline for Multi-Electrode Electrogastrography [Software]. Available from [https://github.com/AleIan2025/Gastric-Signal-Processing-Toolbox-GSPT-](https://github.com/AleIan2025/Gastric-Signal-Processing-Toolbox-GSPT-)
+> Iannone, A., Panasiti, M. S., Aglioti, S. M., & Della Penna, S. (2026, September 3). *Optimizing non-invasive assessment of gastric activity: a fully automated channel-wise pipeline for multi-electrode electrogastrography*. https://doi.org/10.17605/OSF.IO/ENZV5
 
-BibTeX entry:
+BibTeX:
 
 ```bibtex
-@software{GSPT2026,
-  author = {Iannone Alessandro, Panasiti Maria Serena, Aglioti Salvatore Maria, Della Penna Stefania},
-  title = {GSPT: Gastric Signal Processing Toolbox},
-  url = {([https://github.com/AleIan2025/Gastric-Signal-Processing-Toolbox-GSPT-](https://github.com/AleIan2025/Gastric-Signal-Processing-Toolbox-GSPT-))},
-  version = {1.0.0},
-  year = {2026}
+@misc{Iannone2026GSPT,
+  author = {Iannone, Alessandro and Panasiti, Maria Serena and Aglioti, Salvatore Maria and Della Penna, Stefania},
+  title = {Optimizing non-invasive assessment of gastric activity: a fully automated channel-wise pipeline for multi-electrode electrogastrography},
+  year = {2026},
+  month = sep,
+  doi = {10.17605/OSF.IO/ENZV5},
+  url = {https://doi.org/10.17605/OSF.IO/ENZV5},
+  note = {Preprint deposited in an OSF project}
 }
+```
 
 
 
