@@ -1,5 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+
+message: "If you use GSPT in your research, please cite the accompanying preprint listed under preferred-citation."
+
+type: software
+title: "GSPT: Gastric Signal Processing Toolbox"
+
 authors:
   - family-names: "Iannone"
     given-names: "Alessandro"
@@ -9,6 +14,26 @@ authors:
     given-names: "Salvatore Maria"
   - family-names: "Della Penna"
     given-names: "Stefania"
-title: "Optimizing Non-Invasive Assessment of Gastric Activity: A Fully Automated Channel-Wise Pipeline for Multi-Electrode Electrogastrography"
-version: 1.0.0
-date-released: 2026-09-02
+
+version: "1.0.0"
+date-released: "2026-09-02"
+url: "https://github.com/AleIan2025/Gastric_Signal_Processing_Toolbox---GSPT-"
+
+preferred-citation:
+  type: generic
+  status: preprint
+  title: "Optimizing non-invasive assessment of gastric activity: a fully automated channel-wise pipeline for multi-electrode electrogastrography"
+  authors:
+    - family-names: "Iannone"
+      given-names: "Alessandro"
+    - family-names: "Panasiti"
+      given-names: "Maria Serena"
+    - family-names: "Aglioti"
+      given-names: "Salvatore Maria"
+    - family-names: "Della Penna"
+      given-names: "Stefania"
+  year: 2026
+  month: 9
+  date-published: "2026-09-03"
+  doi: "10.17605/OSF.IO/ENZV5"
+  url: "https://doi.org/10.17605/OSF.IO/ENZV5"
